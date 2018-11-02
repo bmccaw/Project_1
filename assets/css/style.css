@@ -1,0 +1,77 @@
+#sun {
+    border-radius:50%;
+    background-color: yellow;
+    height: 150px;
+    width: 150px;
+}
+#mercury {
+    background-image: url(../images/mercury.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+#venus {
+    background-image: url(../images/venus.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+#earth {
+    background-image: url(../images/earth.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+#mars {
+    background-image: url(../images/mars.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+#jupiter {
+    background-image: url(../images/jupiter.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+#saturn {
+    background-image: url(../images/saturn.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+#uranus {
+    background-image: url(../images/uranus.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 40px;
+    width: 40px;
+}
+#neptune {
+    background-image: url(../images/neptune.png);
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
