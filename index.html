@@ -10,17 +10,52 @@
 
 <!-- link fonts -->
 
+<!-- link jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--link bootstrap js for modal-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 
 <head>
 
 </head>
 
 <body>
+    <div class="modal" id="onLoad" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Are you an alien?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Enter the code below and click submit.</p>
+                </div>
+                <div id="randomNum"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1 class="jumbotron">Planet Exploration</h1>
 
     <div class="container">
 
-        <div class="card" id="graphicDiv">planet graphic
+        <div class="card" id="graphicDiv">
+            <div id="sun" class="orbit"> </div>
+            <div id="mercury" class="orbit"> </div>
+            <div id="venus" class="orbit"> </div>
+            <div id="earth" class="orbit"> </div>
+            <div id="mars" class="orbit"> </div>
+            <div id="jupiter" class="orbit"> </div>
+            <div id="saturn" class="orbit"> </div>
+            <div id="uranus" class="orbit"> </div>
+            <div id="neptune" class="orbit"> </div>
 
         </div>
 
@@ -31,14 +66,15 @@
                 <p>Length of year:</p>
                 <p>Radius:</p>
                 <p>Number of Moons:</p>
+                <p>Overview:</p>
                 <p>Potential for Life:</p>
-                <p>Fun Fact:</p>
+                <p>Naming:</p>
             </div>
             <div class="card-body">(right) display chosen photo/video</div>
             <hr>
             <div class="card-body">list photo/videos
-                <button>Images</button>
-                <button>Videos</button>
+                <button class="btn">Images</button>
+                <button class= "btn">Videos</button>
             </div>
         </div>
 
@@ -86,10 +122,43 @@
       <br>
             <button class="btn btn-dark" style = "color: lightcyan; width: 90px" id="submit">Submit</button>
 
+
+            <!-- Group of default radios - option 2 -->
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios"
+                    checked>
+                <label class="custom-control-label" for="defaultGroupExample2">Venus</label>
+
             </div>
             
 
 
+
+
+
+            <!-- Group of default radios - option 2 -->
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios"
+                    checked>
+                <label class="custom-control-label" for="defaultGroupExample5">Jupiter</label>
+            </div>
+
+            <!-- Group of default radios - option 3 -->
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="groupOfDefaultRadios">
+                <label class="custom-control-label" for="defaultGroupExample6">Saturn</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="groupOfDefaultRadios">
+                <label class="custom-control-label" for="defaultGroupExample7">Uranus</label>
+            </div>
+
+            <!-- Group of default radios - option 2 -->
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios"
+                    checked>
+                <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
+            </div>
 
 
 
@@ -107,8 +176,7 @@
 
     <!-- link js page -->
     <script src="assets/javascript/app.js"></script>
-    <!-- link jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </body>
 
 </html>
