@@ -1,4 +1,9 @@
 
+//OnLoad Modal
+$(window).ready (function () {
+    $('#onLoad').modal ('show')
+});
+
 //pollDiv
 
 //resultsDiv
@@ -76,3 +81,4 @@ var planetData = {
         naming: "Neptune is named after the Roman god of the sea"
     },
 };
+
