@@ -10,12 +10,37 @@
 
 <!-- link fonts -->
 
+<!-- link jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--link bootstrap js for modal-->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
 
 <head>
 
 </head>
 
 <body>
+    <div class="modal" id="onLoad" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <h1 class="jumbotron">Planet Exploration</h1>
 
     <div class="container">
@@ -62,7 +87,8 @@
 
             <!-- Group of default radios - option 2 -->
             <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+                <input type="radio" class="custom-control-input" id="defaultGroupExample2" name="groupOfDefaultRadios"
+                    checked>
                 <label class="custom-control-label" for="defaultGroupExample2">Venus</label>
             </div>
 
@@ -78,7 +104,8 @@
 
             <!-- Group of default radios - option 2 -->
             <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios" checked>
+                <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios"
+                    checked>
                 <label class="custom-control-label" for="defaultGroupExample5">Jupiter</label>
             </div>
 
@@ -94,7 +121,8 @@
 
             <!-- Group of default radios - option 2 -->
             <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios" checked>
+                <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios"
+                    checked>
                 <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
             </div>
 
@@ -117,8 +145,7 @@
 
     <!-- link js page -->
     <script src="assets/javascript/app.js"></script>
-    <!-- link jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
 </body>
 
 </html>
