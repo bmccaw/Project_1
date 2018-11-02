@@ -1,76 +1,38 @@
-#sun {
-    border-radius:50%;
-    background-color: yellow;
-    height: 200px;
-    width: 200px;
+body {
+    background-image: url("stary.jpg");
 }
-#mercury {
-    background-image: url(../images/mercury.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
+#graphicDiv {
+    background: rgba(122, 122, 122, 0.5);
+    height: 220px;
 }
-#venus {
-    background-image: url(../images/venus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+#pollDiv {
+    background: rgba(122, 122, 122, 0.5);
+    height: 220px;
+    margin-bottom: 20px;
 }
-#earth {
-    background-image: url(../images/earth.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+#resultsDiv {
+    background: rgba(122, 122, 122, 0.5);
+    height: 220px;
+    margin-bottom: 20px;
 }
-#mars {
-    background-image: url(../images/mars.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+#newsDiv {
+    background: rgba(122, 122, 122, 0.5);
+    height: 220px;
 }
-#jupiter {
-    background-image: url(../images/jupiter.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 110px;
-    width: 110px;
+#titleDiv {
+    background: rgba(122, 122, 122, 0.5);
+    text-align: center;
+    height: 70px;
+    margin-bottom: 20px;
+    padding-top: 10px;
 }
-#saturn {
-    background-image: url(../images/saturn.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 110px;
-    width: 150px;
+h5 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 5px rgb(5, 155, 0);
 }
-#uranus {
-    background-image: url(../images/uranus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 40px;
-    width: 40px;
-}
-#neptune {
-    background-image: url(../images/neptune.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 5px rgb(5, 155, 0);
 }
