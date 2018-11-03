@@ -12,6 +12,8 @@
     perspective: 1000px;
     perspective-origin: 60% 50%;
     transform: rotate(-10deg);
+    right: 500px;
+    top: 100px;
 }
 .wrapper > div{
     position: relative;
@@ -22,7 +24,7 @@
 #sun {
     width: 250px;
     position: absolute;
-    top: -100px;;
+    top: -130px;;
     left: 150px;
     z-index: 1;
     height: 125px !important;
