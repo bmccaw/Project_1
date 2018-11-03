@@ -90,6 +90,7 @@ p {
 .jumbotron{
     background: rgba(122, 122, 122, 0.5);
 }
+/* Planet animation code goes here */
 .wrapper {
     position:relative;
     margin: 0 auto;
@@ -420,3 +421,4 @@ p {
         transform: rotateY(-360deg) rotateX(73deg);
     }
 }
+/*Planet Animation code ends here*/
