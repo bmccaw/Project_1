@@ -3,48 +3,100 @@
 $(window).ready(function () {
     $('#onLoad').modal('show')
 });
-var mercuryTotal=0;
-let venusTotal =0;
-let earthTotal =0;
-let marsTotal =0;
-let jupiterTotal=0;
-let saturnTotal =0;
-let uranusTotal =0;
-let neptuneTotal =0
-// $(document).on("click", $("#submit"), function(){
-//     if($('#mercuryPicked').is(':checked')) {
-//         mercuryTotal++
-//         console.log(mercuryTotal)
-//     }
-//     if($('#venusPicked').is(':checked')) {
-//         venusTotal++
-//         console.log(venusTotal)
-//     }
-//     if($('#earthPicked').is(':checked')) {
-//         earthTotal++
-//         console.log(earthTotal)
-//     }
-//     if($('#marsPicked').is(':checked')) {
-//         marsTotal++
-//         console.log(marsTotal)
-//     }
-//     if($('#jupiterPicked').is(':checked')) {
-//         jupiterTotal++
-//         console.log(jupiterTotal)
-//     }
-//     if($('#saturnPicked').is(':checked')) {
-//         saturnTotal++
-//         console.log(saturnTotal)
-//     }
-//     if($('#uranusPicked').is(':checked')) {
-//         uranusTotal++
-//         console.log(uranusTotal)
-//     }
-//     if($('#neptunePicked').is(':checked')) {
-//         neptuneTotal++
-//         console.log(neptuneTotal)
-//     }
-// })
+
+let mercuryTotal = 0;
+let venusTotal = 0;
+let earthTotal = 0;
+let marsTotal = 0;
+let jupiterTotal = 0;
+let saturnTotal = 0;
+let uranusTotal = 0;
+let neptuneTotal = 0
+let total = 0
+var config = {
+    apiKey: "AIzaSyC7wfuP2WpWUbOfKvWagjOQdJrSHAvLlfg",
+    authDomain: "project1-cce4d.firebaseapp.com",
+    databaseURL: "https://project1-cce4d.firebaseio.com",
+    projectId: "project1-cce4d",
+    storageBucket: "project1-cce4d.appspot.com",
+    messagingSenderId: "712116811556"
+};
+firebase.initializeApp(config);
+var database = firebase.database();
+if(mercuryTotal != null) {
+database.ref().on("value", function (snapshot) {
+    mercuryTotal = snapshot.val().mercury
+    venusTotal = snapshot.val().venus
+    earthTotal = snapshot.val().earth
+    marsTotal = snapshot.val().mars
+    jupiterTotal = snapshot.val().jupiter
+    saturnTotal = snapshot.val().saturn
+    uranusTotal = snapshot.val().uranus
+    neptuneTotal = snapshot.val().neptune
+    total = snapshot.val().planetTotal
+    mercuryPercent = parseInt(mercuryTotal) / parseInt(total) * 100
+    venusPercent = parseInt(venusTotal) / parseInt(total) * 100
+    console.log(venusPercent)
+    earthPercent = parseInt(earthTotal) / parseInt(total) * 100
+    marsPercent = parseInt(marsTotal) / parseInt(total) * 100
+    jupiterPercent = parseInt(jupiterTotal) / parseInt(total) * 100
+    saturnPercent = parseInt(saturnTotal) / parseInt(total) * 100
+    uranusPercent = parseInt(uranusTotal) / parseInt(total) * 100
+})
+}
+$(document).on("click", "#enter", function (event) {
+    event.preventDefault();
+    if ($('#defaultGroupExample1').is(':checked')) {
+        mercuryTotal++
+        console.log(mercuryTotal)
+    }
+    if ($('#defaultGroupExample2').is(':checked')) {
+        venusTotal++
+        console.log(venusTotal)
+    }
+    if ($('#defaultGroupExample3').is(':checked')) {
+        earthTotal++
+        console.log(earthTotal)
+    }
+    if ($('#defaultGroupExample4').is(':checked')) {
+        marsTotal++
+        console.log(marsTotal)
+    }
+    if ($('#defaultGroupExample5').is(':checked')) {
+        jupiterTotal++
+        console.log(jupiterTotal)
+    }
+    if ($('#defaultGroupExample6').is(':checked')) {
+        saturnTotal++
+        console.log(saturnTotal)
+    }
+    if ($('#defaultGroupExample7').is(':checked')) {
+        uranusTotal++
+        console.log(uranusTotal)
+    }
+    if ($('#defaultGroupExample8').is(':checked')) {
+        neptuneTotal++
+        console.log(neptuneTotal)
+    }
+    total++
+    console.log("total" + total)
+    console.log(mercuryTotal)
+    $("#mercury").text(mercuryPercent + "%")
+    database.ref().set({
+        
+        mercury: mercuryTotal,
+        venus: venusTotal,
+        earth: earthTotal,
+        mars: marsTotal,
+        jupiter: jupiterTotal,
+        saturn: saturnTotal,
+        uranus: uranusTotal,
+        neptune: neptuneTotal,
+        planetTotal: total,
+    })
+
+
+})
 
 
 
