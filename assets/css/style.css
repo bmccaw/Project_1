@@ -1,76 +1,92 @@
-#sun {
-    border-radius:50%;
-    background-color: yellow;
-    height: 200px;
-    width: 200px;
+body {
+    background-image: url("stary.jpg");
 }
-#mercury {
-    background-image: url(../images/mercury.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
+#graphicDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
 }
-#venus {
-    background-image: url(../images/venus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+#pollDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
 }
-#earth {
-    background-image: url(../images/earth.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+#resultsDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
 }
-#mars {
-    background-image: url(../images/mars.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+#newsDiv {
+    background: rgba(122, 122, 122, 0.5);
 }
-#jupiter {
-    background-image: url(../images/jupiter.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 110px;
-    width: 110px;
+h5 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
 }
-#saturn {
-    background-image: url(../images/saturn.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 110px;
-    width: 150px;
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
+    text-align: center;
 }
-#uranus {
-    background-image: url(../images/uranus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 40px;
-    width: 40px;
+.card-header {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0); 
 }
-#neptune {
-    background-image: url(../images/neptune.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+p {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0); ;
+}
+.custom-control-label {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);    
+}
+.modal-content {
+    background: rgba(1, 112, 6, 0.5);
+    margin-bottom: 20px;
+}
+.btn-primary {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(64, 247, 47);
+    border: 2px solid rgb(64, 247, 47);
+    box-shadow: 0 0 10px rgb(5, 155, 0); 
+}
+.btn-secondary {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(247, 47, 47);
+    border: 2px solid rgb(247, 47, 47);
+    box-shadow: 0 0 10px rgb(167, 2, 2);   
+}
+.btn-primary:hover {
+    background-color: rgb(174, 252, 167);
+    color: white;
+    box-shadow: 0 0 10px rgb(124, 250, 112);
+    border: 2px solid rgb(174, 252, 167);
+}
+.btn-primary:active {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+.btn-primary:focus {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(64, 247, 47);
+    border: 2px solid rgb(64, 247, 47);
+    box-shadow: 0 0 10px rgb(5, 155, 0); 
+}
+.btn-secondary:hover {
+    background-color: rgb(255, 145, 145);
+    color: white;
+    box-shadow: 0 0 10px rgb(255, 112, 112);
+    border: 2px solid rgb(255, 145, 145);
+}
+.card-body {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
+}
+.jumbotron{
+    background: rgba(122, 122, 122, 0.5);
 }
