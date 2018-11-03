@@ -178,4 +178,49 @@ var planetData = {
     },
 };
 
+//when we click on a plaent button
+$(".planet").click(function () {
+
+    $("#graphicDiv").hide();
+
+    $("#resultsDiv").show();
+    $("#pollDiv").show();
+    $("#NewsDiv").show();
+
+    //assign planet clicked as chosenPlanet variable
+    var chosenPlanet = $(this).attr("id");
+
+    //connect to DOM to display planet facts from object
+    $("#planetName").text(chosenPlanet);
+    $("#dayLengthText").text(planetData[chosenPlanet].dayLength);
+    $("#yearLengthText").text(planetData[chosenPlanet].yearLength);
+    $("#radiusText").text(planetData[chosenPlanet].radius);
+    $("#moonNumText").text(planetData[chosenPlanet].moonNum);
+    $("#overviewText").text(planetData[chosenPlanet].overview);
+    $("#lifeText").text(planetData[chosenPlanet].life);
+    $("#namingText").text(planetData[chosenPlanet].naming);
+
+    //pull images from api
+    var imageQueryURL = "https://images-api.nasa.gov/search?q=" + chosenPlanet + "&media_type=image";
+
+    $.ajax({
+        url: imageQueryURL,
+        method: "GET"
+    })
+    .then(function(nasaResponse){
+
+        var nasaResults = nasaResponse.collection.items;
+
+        for (i=0; i < 8; i++){
+            var imageSet = $("<img>").attr("src", nasaResults[i].links[0].href).addClass("resultImages");
+
+            $("#imageDiv").append(imageSet);
+        }
+
+        console.log(nasaResponse.collection.items[0].links[0].href);
+    });
+
+
+});
+
 

@@ -1,76 +1,429 @@
+body {
+    background-image: url("stary.jpg");
+}
+#graphicDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
+}
+#pollDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
+}
+#resultsDiv {
+    background: rgba(122, 122, 122, 0.5);
+    margin-bottom: 20px;
+}
+#newsDiv {
+    background: rgba(122, 122, 122, 0.5);
+}
+h5 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
+}
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
+    text-align: center;
+}
+.card-header {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0); 
+}
+p {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0); ;
+}
+.custom-control-label {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);    
+}
+.modal-content {
+    background: rgba(1, 112, 6, 0.5);
+    margin-bottom: 20px;
+}
+.btn-primary {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(64, 247, 47);
+    border: 2px solid rgb(64, 247, 47);
+    box-shadow: 0 0 10px rgb(5, 155, 0); 
+}
+.btn-secondary {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(247, 47, 47);
+    border: 2px solid rgb(247, 47, 47);
+    box-shadow: 0 0 10px rgb(167, 2, 2);   
+}
+.btn-primary:hover {
+    background-color: rgb(174, 252, 167);
+    color: white;
+    box-shadow: 0 0 10px rgb(124, 250, 112);
+    border: 2px solid rgb(174, 252, 167);
+}
+.btn-primary:active {
+    background-color: rgb(255, 255, 255);
+    color: white;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}
+.btn-primary:focus {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(64, 247, 47);
+    border: 2px solid rgb(64, 247, 47);
+    box-shadow: 0 0 10px rgb(5, 155, 0); 
+}
+.btn-secondary:hover {
+    background-color: rgb(255, 145, 145);
+    color: white;
+    box-shadow: 0 0 10px rgb(255, 112, 112);
+    border: 2px solid rgb(255, 145, 145);
+}
+.card-body {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(64, 247, 47);
+    text-shadow: 0 0 10px rgb(5, 155, 0);
+}
+.jumbotron{
+    background: rgba(122, 122, 122, 0.5);
+}
+/* Planet animation code goes here */
+.wrapper {
+    position:relative;
+    margin: 0 auto;
+    display:block;
+    margin-top: 200px;
+    perspective: 1000px;
+    perspective-origin: 60% 50%;
+    transform: rotate(-10deg);
+    right: 500px;
+    top: 100px;
+}
+.wrapper > div{
+    position: relative;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    height: 0;
+}
 #sun {
-    border-radius:50%;
-    background-color: yellow;
-    height: 200px;
-    width: 200px;
+    width: 250px;
+    position: absolute;
+    top: -130px;;
+    left: 150px;
+    z-index: 1;
+    height: 125px !important;
+}
+#sun .star {
+    width: 250px;
+    height: 250px;
+    background: url(../images/sun.png) no-repeat;
+    background-size: cover;
+    border-radius:250px;
+    margin: 0 auto;
+    animation: sunrotate 40s infinite linear;
+}
+.planet {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    animation-iteration-count: infinite;
+    overflow:hidden;
 }
 #mercury {
+    position: absolute;
+    width: 400px;
+    z-index: 2;
+    animation: orbitmercury 12s infinite linear;
+    top: -7.5px;
+}
+#mercury .planet {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
     background-image: url(../images/mercury.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 20px;
-    width: 20px;
+    animation: anti-spin 12s infinite linear;
 }
 #venus {
+    position: absolute;
+    width: 506px;
+    z-index: 3;
+    animation: orbitvenus 15s infinite linear;
+    top: -19px;
+}
+#venus .planet {
+    width: 45px;
+    height: 38px;
+    border-radius: 38px;
     background-image: url(../images/venus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    animation: anti-spin 15s infinite linear;
 }
 #earth {
-    background-image: url(../images/earth.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
+    position: absolute;
+    width: 610px;
+    z-index: 4;
+    animation: orbitearth 20s infinite linear;
+    top: -20px;
+}
+#earth .planet {
+    width: 45px;
     height: 40px;
-    width: 40px;
+    border-radius: 40px;
+    background-image: url(../images/earth.png);
+    animation: anti-spin 20s infinite linear;
 }
 #mars {
+    position: absolute;
+    width: 706px;
+    z-index: 5;
+    animation: orbitmars 30s infinite linear;
+    top: -11px;
+}
+#mars .planet {
+    width: 25px;
+    height: 22px;
+    border-radius: 22px;
     background-image: url(../images/mars.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    animation: anti-spin 30s infinite linear;
 }
 #jupiter {
+    position: absolute;
+    width: 800px;
+    z-index: 6;
+    animation: orbitjupiter 50s infinite linear;
+    top: -64px;
+}
+#jupiter .planet {
+    width: 140px;
+    height: 128px;
+    border-radius: 128px;
     background-image: url(../images/jupiter.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 110px;
-    width: 110px;
+    animation: anti-spin 50s infinite linear;
 }
 #saturn {
+    position: absolute;
+    width: 1000px;
+    z-index: 7;
+    animation: orbitsaturn 70s infinite linear;
+    top: -50px;
+    left:-50px;
+}
+#saturn .planet {
+    width: 230px;
+    height: 170px;
     background-image: url(../images/saturn.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 110px;
-    width: 150px;
+    animation: anti-spin 70s infinite linear;
 }
 #uranus {
+    position: absolute;
+    width: 900px;
+    z-index: 8;
+    animation: orbituranus 80s infinite linear;
+    top: -70;
+}
+#uranus .planet {
+    width: 55px;
+    height: 50px;
+    border-radius:50px;
     background-image: url(../images/uranus.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    height: 40px;
-    width: 40px;
+    animation: anti-spin 80s infinite linear;
 }
 #neptune {
+    position: absolute;
+    width: 1000px;
+    z-index: 9;
+    animation: orbitneptune 85s infinite linear;
+    top: -70;
+}
+#neptune .planet {
+    width: 55px;
+    height: 50px;
+    border-radius:50px;
     background-image: url(../images/neptune.png);
-    background-position:center;
-    background-size:cover;
-    background-repeat:no-repeat;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    animation: anti-spin 85s infinite linear;
+}
+
+@keyframes sunrotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform:rotate(-360deg);
+    }
+}
+@keyframes orbitmercury {
+    0%{
+        z-index: 2;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 2;
+    }
+    50%{
+        z-index: -2;
+    }
+    99%{
+        z-index: -2;
+    }
+    100%{
+        z-index: 2;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitvenus {
+    0%{
+        z-index: 3;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 3;
+    }
+    50%{
+        z-index: -3;
+    }
+    99%{
+        z-index: -3;
+    }
+    100%{
+        z-index: 3;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitearth {
+    0%{
+        z-index: 4;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 4;
+    }
+    50%{
+        z-index: -4;
+    }
+    99%{
+        z-index: -4;
+    }
+    100%{
+        z-index: 4;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitmars {
+    0%{
+        z-index: 5;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 5;
+    }
+    50%{
+        z-index: -5;
+    }
+    99%{
+        z-index: -5;
+    }
+    100%{
+        z-index: 5;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitjupiter {
+    0%{
+        z-index: 6;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 6;
+    }
+    50%{
+        z-index: -6;
+    }
+    99%{
+        z-index: -6;
+    }
+    100%{
+        z-index: 6;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitsaturn {
+    0%{
+        z-index: 7;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 7;
+    }
+    50%{
+        z-index: -7;
+    }
+    99%{
+        z-index: -7;
+    }
+    100%{
+        z-index: 7;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbituranus {
+    0%{
+        z-index: 8;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 8;
+    }
+    50%{
+        z-index: -8;
+    }
+    99%{
+        z-index: -8;
+    }
+    100%{
+        z-index: 8;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes orbitneptune {
+    0%{
+        z-index: 9;
+        transform: rotateY(0);
+    }
+    49%{
+        z-index: 9;
+    }
+    50%{
+        z-index: -9;
+    }
+    99%{
+        z-index: -9;
+    }
+    100%{
+        z-index: 9;
+        transform: rotateY(360deg);
+    }
+}
+@keyframes anti-spin {
+    form{
+        transform: rotateY(0);
+    }
+    to{
+        transform: rotateY(-360deg);
+    }
+}
+@keyframes anti-spin-rings {
+    form{
+        transform: rotateY(0) rotateX(73deg);
+    }
+    to {
+        transform: rotateY(-360deg) rotateX(73deg);
+    }
+}
+/*Planet Animation code ends here*/
+
+/*reults div css
+.resultImages{
+    width:200px;
 }
