@@ -3,7 +3,7 @@
 $(window).ready(function () {
     $('#onLoad').modal('show')
 });
-
+$("#poll-results").hide()
 let mercuryTotal = 0;
 let venusTotal = 0;
 let earthTotal = 0;
@@ -42,13 +42,17 @@ database.ref().on("value", function (snapshot) {
     jupiterPercent = parseInt(jupiterTotal) / parseInt(total) * 100
     saturnPercent = parseInt(saturnTotal) / parseInt(total) * 100
     uranusPercent = parseInt(uranusTotal) / parseInt(total) * 100
+    neptunePercent = parseInt(neptuneTotal) / parseInt(total) * 100
 })
 }
+
 $(document).on("click", "#enter", function (event) {
     event.preventDefault();
+    $(".custom-radio").hide()
     if ($('#defaultGroupExample1').is(':checked')) {
         mercuryTotal++
         console.log(mercuryTotal)
+
     }
     if ($('#defaultGroupExample2').is(':checked')) {
         venusTotal++
@@ -79,9 +83,14 @@ $(document).on("click", "#enter", function (event) {
         console.log(neptuneTotal)
     }
     total++
+    $("#poll-results").show()
     console.log("total" + total)
     console.log(mercuryTotal)
-    $("#mercury").text(mercuryPercent + "%")
+   
+
+
+ 
+
     database.ref().set({
         
         mercury: mercuryTotal,
@@ -94,9 +103,17 @@ $(document).on("click", "#enter", function (event) {
         neptune: neptuneTotal,
         planetTotal: total,
     })
-
+    $("#mercury-percent").text("Mercury: " + Math.round(mercuryPercent) + "%")
+    $("#venus-percent").text("Venus: " + Math.round(venusPercent) + "%")
+    $("#earth-percent").text("Earth: " + Math.round(earthPercent) + "%")
+    $("#mars-percent").text("Mars: " + Math.round(marsPercent) + "%")
+    $("#jupiter-percent").text("Jupiter: " + Math.round(jupiterPercent) + "%")
+    $("#saturn-percent").text("Saturn: " + Math.round(saturnPercent) + "%")
+    $("#uranus-percent").text("Uranus: " + Math.round(uranusPercent) + "%")
+    $("#neptune-percent").text("Neptune: " + Math.round(neptunePercent) + "%")
 
 })
+
 
 
 
