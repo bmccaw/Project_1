@@ -179,7 +179,7 @@ var planetData = {
 };
 
 //when we click on a plaent button
-$(".planet").click(function () {
+$(".clickPlanet").click(function () {
 
     $("#graphicDiv").hide();
 
