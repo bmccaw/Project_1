@@ -219,8 +219,6 @@ $(".clickPlanet").click(function () {
 
         console.log(nasaResponse.collection.items[0].links[0].href);
     });
-
-
 });
 
 
