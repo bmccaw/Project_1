@@ -2,10 +2,15 @@
 <html>
 
 <title>Planet Exploration</title>
+<!--links for media sharing-->
+
+<!--link to font awesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 <!-- link bottstrap -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 <!-- link css page -->
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-social.less">
 <!-- link firebase -->
 <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
 <!-- link fonts -->
@@ -49,7 +54,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card" id="graphicDiv" style="height: 40rem;">
-            
+
                 <div class="wrapper">
                     <div id="sun">
                         <div class="star"></div>
@@ -86,13 +91,27 @@
         <div class="card" id="resultsDiv">
             <div class="card-header" id="planetName">Planet Name</div>
             <div class="card-body">
-                <p>Length of day: <span id="dayLengthText"></span></p>
-                <p>Length of year: <span id="yearLengthText"></span></p>
-                <p>Radius: <span id="radiusText"></span></p>
-                <p>Number of Moons: <span id="moonNumText"></span></p>
-                <p>Overview: <span id="overviewText"></span></p>
-                <p>Potential for Life: <span id="lifeText"></span></p>
-                <p>Naming: <span id="namingText"></span></p>
+                <p>Length of day:
+                    <span id="dayLengthText"></span>
+                </p>
+                <p>Length of year:
+                    <span id="yearLengthText"></span>
+                </p>
+                <p>Radius:
+                    <span id="radiusText"></span>
+                </p>
+                <p>Number of Moons:
+                    <span id="moonNumText"></span>
+                </p>
+                <p>Overview:
+                    <span id="overviewText"></span>
+                </p>
+                <p>Potential for Life:
+                    <span id="lifeText"></span>
+                </p>
+                <p>Naming:
+                    <span id="namingText"></span>
+                </p>
             </div>
 
             <div class="card-body">
@@ -100,22 +119,20 @@
             <hr>
             <div class="card-body">list photo/videos
                 <button class="btn">Images</button>
-                <button class= "btn">Videos</button>
+                <button class="btn">Videos</button>
                 <div id="imageDiv"></div>
                 <div id="videoDiv"></div>
-          
+
             </div>
         </div>
 
         <div class="card" id="pollDiv">
-            <!-- <div id="planet-picker">Pick your favorite Planet!</div>
-
-<br> -->
-
+           
+<br>
             <div class="custom-control custom-radio">
-                    <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
+                <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
 
-                    <br>
+                <br>
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
                     <label class="custom-control-label" for="defaultGroupExample1">Mercury</label>
@@ -148,46 +165,27 @@
                     <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios">
                     <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
                 </div>
-      <br>
-            <button class="btn btn-dark" style = "color: lightcyan; width: 90px" id="enter">Submit</button>
-            <div>
-                <div id="mercury"></div>
-                <div id="venus"></div>
-                <div id="earth"></div>
-                <div id="mars"></div>
-                <div id="jupiter"></div>
-                <div id="saturn"></div>
-                <div id="uranus"></div>
-                <div id="neptune"></div>
-            </div>
+                <br>
+                <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
+                </div>
+                <div id = "poll-results" style="color: rgb(64, 247, 47)">
+                    <div>How well did your planet do?</div>
+                    <div id="mercury-percent"></div>
+                    <div id="venus-percent"></div>
+                    <div id="earth-percent"></div>
+                    <div id="mars-percent"></div>
+                    <div id="jupiter-percent"></div>
+                    <div id="saturn-percent"></div>
+                    <div id="uranus-percent"></div>
+                    <div id="neptune-percent"></div>
+                   
+                </div>
 
 
 
-          
-           <!-- Group of default radios - option 2 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios"
-                    checked>
-                <label class="custom-control-label" for="defaultGroupExample5">Jupiter</label>
-            </div>
 
-            <!-- Group of default radios - option 3 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="groupOfDefaultRadios">
-                <label class="custom-control-label" for="defaultGroupExample6">Saturn</label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="groupOfDefaultRadios">
-                <label class="custom-control-label" for="defaultGroupExample7">Uranus</label>
-            </div>
 
-            <!-- Group of default radios - option 2 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios"
-                    checked>
-                <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
-            </div>
-        </div>
+            
 
 
 
@@ -203,9 +201,13 @@
 
 
 
-    <!-- link js page -->
-    <script src="assets/javascript/app.js"></script>
+        <!-- link js page -->
+        <script src="jquery.js"></script>
+    <script src="jssocials.min.js"></script>
+        <script src="assets/javascript/app.js"></script>
+
 
 </body>
+
 
 </html>
