@@ -4,6 +4,27 @@ $(window).ready(function () {
     $('#onLoad').modal('show')
 });
 
+var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	var charactersLength = 7;
+	var randomGenerator = '';
+	for (var i=0; i<charactersLength; i++) {
+		var rnum = Math.floor(Math.random() * characters.length);
+		randomGenerator += characters.substring(rnum,rnum+1);
+    }
+    $("#randomNum").text(randomGenerator)
+    $("#submit").on("click", function() {
+    
+if (randomGenerator==$("#num").val()){
+    $(".modal").hide()
+}
+else{
+    $("#modal-text").text("I'm sorry that was incorrect try again")
+}
+
+
+    })
+
+
 $("#poll-results").hide()
 let mercuryTotal = 0;
 let venusTotal = 0;

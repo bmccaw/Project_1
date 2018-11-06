@@ -2,6 +2,7 @@ body {
     background-image: url("stary.jpg");
     
 }
+#randomNum{color:rgb(64, 247, 47);}
 #graphicDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
