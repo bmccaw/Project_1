@@ -1,7 +1,12 @@
 
 //OnLoad Modal
 $(window).ready(function () {
-    $('#onLoad').modal('show')
+    $('#onLoad').modal('show');
+
+    //hide content
+    $("#resultsDiv").hide();
+    $("#pollDiv").hide();
+    $("#newsDiv").hide();
 });
 
 let mercuryTotal = 0;
@@ -204,14 +209,14 @@ $(".clickPlanet").click(function () {
 
     $("#resultsDiv").show();
     $("#pollDiv").show();
-    $("#NewsDiv").show();
+    $("#newsDiv").show();
     $("#videoDiv").hide();
 
     //assign planet clicked as chosenPlanet variable
     var chosenPlanet = $(this).attr("id");
 
     //connect to DOM to display planet facts from object
-    $("#planetName").text(chosenPlanet);
+    $("#planetName").text(chosenPlanet.toUpperCase());
     $("#dayLengthText").text(planetData[chosenPlanet].dayLength);
     $("#yearLengthText").text(planetData[chosenPlanet].yearLength);
     $("#radiusText").text(planetData[chosenPlanet].radius);
@@ -222,7 +227,7 @@ $(".clickPlanet").click(function () {
 
     //display main planet image
     var mainImage = $("<img>").attr("src", "assets/images/" + chosenPlanet + ".png")
-    $("#chosenDisplay").append(mainImage);
+    $("#chosenDisplay").html(mainImage);
 
     //pull images from api and connect to dom
     var imageQueryURL = "https://images-api.nasa.gov/search?q=" + chosenPlanet + "&media_type=image";
@@ -236,34 +241,80 @@ $(".clickPlanet").click(function () {
             var nasaResults = nasaResponse.collection.items;
 
             for (i = 0; i < 10; i++) {
-                var imageSet = $("<img>").attr("src", nasaResults[i].links[0].href).addClass("resultImages");
+                var imageSet = $("<img>")
+                    .attr("src", nasaResults[i].links[0].href)
+                    .addClass("resultImages");
 
                 $("#imageDiv").append(imageSet);
             }
+
+            //get videos for chosen planet and connect to dom
+            for (i = 0; i < 3; i++) {
+
+                var video = $("<video>")
+                    .attr("src", planetData[chosenPlanet].videoLinks[i])
+                    .addClass("resultVideos")
+                    .attr("type", "video/mp4")
+                    .attr("controls", "play")
+                    .attr("controls", "pause");
+
+                $("#videoDiv").append(video);
+
+            };
+
+            //change display image to specific result image when clicked
+            $(".resultImages").click(function () {
+
+                var chosenImage = $("<img>").attr("src", $(this).attr("src"))
+                $("#chosenDisplay").html(chosenImage);
+            });
+
+            //change display image to specific result video when clicked
+            $(".resultVideos").click(function () {
+
+                var chosenVideo = $("<video>")
+                    .attr("src", $(this).attr("src"))
+                    .attr("type", "video/mp4")
+                    .attr("controls", "play")
+                    .attr("controls", "pause");
+
+                $("#chosenDisplay").html(chosenVideo);
+            });
+
         });
 
+    //change display image back to main planet image when planet name is clicked
+    $("#planetName").click(function () {
 
-    //get vieos for chosen planet and connect to dom
-    for (i = 0; i < 3; i++) {
+        $("#chosenDisplay").html(mainImage);
+    });
 
-        var video = $("<video>").attr("src", planetData[chosenPlanet].videoLinks[i]).addClass("resultImages").attr("type", "video/mp4");
-
-        $("#videoDiv").append(video);
-
-    };
-
-    
 });
 
-//toggle between images/videos
+//images/videos buttons to alternate
 $("#imageBtn").click(function () {
     $("#imageDiv").show()
     $("#videoDiv").hide()
-    console.log("images");
 });
 
 $("#videoBtn").click(function () {
     $("#imageDiv").hide()
     $("#videoDiv").show()
-    console.log("videos");
+});
+
+//back button click
+$("#backBtn").click(function () {
+
+    //change what is displayed on screen
+    $("#graphicDiv").show();
+
+    $("#resultsDiv").hide();
+    $("#pollDiv").hide();
+    $("#newsDiv").hide();
+
+    //clear out specific planet results
+    $("#imageDiv").empty();
+    $("#videoDiv").empty();
+
+    //******************/clear out news articles once connected *************************
 });

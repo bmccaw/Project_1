@@ -424,7 +424,7 @@ p {
 /*Planet Animation code ends here*/
 
 /*reults div css*/
-.resultImages{
+.resultImages, .resultVideos{
     width:200px;
     padding:5px;
 }

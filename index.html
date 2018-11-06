@@ -49,7 +49,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card" id="graphicDiv" style="height: 40rem;">
-            
+
                 <div class="wrapper">
                     <div id="sun">
                         <div class="star"></div>
@@ -84,7 +84,7 @@
     </div>
     <div class="container">
         <div class="card" id="resultsDiv">
-            <div class="card-header" id="planetName">Planet Name</div>
+            <h3 class="card-header text-center" id="planetName">Planet Name</h3>
             <div class="card-body">
                 <p>Length of day: <span id="dayLengthText"></span></p>
                 <p>Length of year: <span id="yearLengthText"></span></p>
@@ -93,17 +93,19 @@
                 <p>Overview: <span id="overviewText"></span></p>
                 <p>Potential for Life: <span id="lifeText"></span></p>
                 <p>Naming: <span id="namingText"></span></p>
+                <button class="btn" id="backBtn">Choose Another Planet</button>
             </div>
 
-            <div class="card-body" id="chosenDisplay">
-                </div>
+            <div class="card-body">
+                <span id="chosenDisplay"></span>
+            </div>
             <hr>
             <div class="card-body">
                 <button class="btn" id="imageBtn">Images</button>
-                <button class= "btn" id="videoBtn">Videos</button>
+                <button class="btn" id="videoBtn">Videos</button>
                 <div id="imageDiv"></div>
                 <div id="videoDiv"></div>
-          
+
             </div>
         </div>
 
@@ -113,9 +115,9 @@
 <br> -->
 
             <div class="custom-control custom-radio">
-                    <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
+                <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
 
-                    <br>
+                <br>
                 <div class="custom-control custom-radio">
                     <input type="radio" class="custom-control-input" id="defaultGroupExample1" name="groupOfDefaultRadios">
                     <label class="custom-control-label" for="defaultGroupExample1">Mercury</label>
@@ -148,46 +150,46 @@
                     <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios">
                     <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
                 </div>
-      <br>
-            <button class="btn btn-dark" style = "color: lightcyan; width: 90px" id="enter">Submit</button>
-            <div>
-                <div id="mercury"></div>
-                <div id="venus"></div>
-                <div id="earth"></div>
-                <div id="mars"></div>
-                <div id="jupiter"></div>
-                <div id="saturn"></div>
-                <div id="uranus"></div>
-                <div id="neptune"></div>
-            </div>
+                <br>
+                <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
+                <div>
+                    <div id="mercury"></div>
+                    <div id="venus"></div>
+                    <div id="earth"></div>
+                    <div id="mars"></div>
+                    <div id="jupiter"></div>
+                    <div id="saturn"></div>
+                    <div id="uranus"></div>
+                    <div id="neptune"></div>
+                </div>
 
 
 
-          
-           <!-- Group of default radios - option 2 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios"
-                    checked>
-                <label class="custom-control-label" for="defaultGroupExample5">Jupiter</label>
-            </div>
 
-            <!-- Group of default radios - option 3 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="groupOfDefaultRadios">
-                <label class="custom-control-label" for="defaultGroupExample6">Saturn</label>
-            </div>
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="groupOfDefaultRadios">
-                <label class="custom-control-label" for="defaultGroupExample7">Uranus</label>
-            </div>
+                <!-- Group of default radios - option 2 -->
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample5" name="groupOfDefaultRadios"
+                        checked>
+                    <label class="custom-control-label" for="defaultGroupExample5">Jupiter</label>
+                </div>
 
-            <!-- Group of default radios - option 2 -->
-            <div class="custom-control custom-radio">
-                <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios"
-                    checked>
-                <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
+                <!-- Group of default radios - option 3 -->
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample6" name="groupOfDefaultRadios">
+                    <label class="custom-control-label" for="defaultGroupExample6">Saturn</label>
+                </div>
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample7" name="groupOfDefaultRadios">
+                    <label class="custom-control-label" for="defaultGroupExample7">Uranus</label>
+                </div>
+
+                <!-- Group of default radios - option 2 -->
+                <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="defaultGroupExample8" name="groupOfDefaultRadios"
+                        checked>
+                    <label class="custom-control-label" for="defaultGroupExample8">Neptune</label>
+                </div>
             </div>
-        </div>
 
 
 
@@ -203,8 +205,8 @@
 
 
 
-    <!-- link js page -->
-    <script src="assets/javascript/app.js"></script>
+        <!-- link js page -->
+        <script src="assets/javascript/app.js"></script>
 
 </body>
 
