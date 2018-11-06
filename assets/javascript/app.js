@@ -3,6 +3,7 @@
 $(window).ready(function () {
     $('#onLoad').modal('show')
 });
+
 $("#poll-results").hide()
 let mercuryTotal = 0;
 let venusTotal = 0;
@@ -86,7 +87,8 @@ $(document).on("click", "#enter", function (event) {
     $("#poll-results").show()
     console.log("total" + total)
     console.log(mercuryTotal)
-   
+
+        
 
 
  
