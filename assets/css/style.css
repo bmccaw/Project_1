@@ -233,13 +233,13 @@ p {
     width: 800px;
     z-index: 6;
     animation: orbitjupiter 50s infinite linear;
-    top: -64px;
+    top: -50px;
     left: -80px;
 }
 #jupiter .planet {
-    width: 128px;
-    height: 128px;
-    border-radius: 128px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
     background-image: url(../images/jupiter.png);
     background-size: inherit;
     background-position: center;
@@ -257,9 +257,9 @@ p {
     left:-100px;
 }
 #saturn .planet {
-    width: 128px;
-    height: 128px;
-    border-radius: 128px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
     background-image: url(../images/saturn.png);
     background-size: inherit;
     background-position: center;
