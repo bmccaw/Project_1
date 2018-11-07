@@ -111,39 +111,36 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="card" id="resultsDiv">
-            <div class="card-header" id="planetName">Planet Name</div>
-            <div class="card-body">
-                <p>Length of day:
-                    <span id="dayLengthText"></span>
-                </p>
-                <p>Length of year:
-                    <span id="yearLengthText"></span>
-                </p>
-                <p>Radius:
-                    <span id="radiusText"></span>
-                </p>
-                <p>Number of Moons:
-                    <span id="moonNumText"></span>
-                </p>
-                <p>Overview:
-                    <span id="overviewText"></span>
-                </p>
-                <p>Potential for Life:
-                    <span id="lifeText"></span>
-                </p>
-                <p>Naming:
-                    <span id="namingText"></span>
-                </p>
+
+
+    <div class="row">
+        <div class="card col-md-8" id="resultsDiv">
+            <h3 class="card-header text-center" id="planetName">Planet Name</h3>
+
+            <div class="row">
+                <div class="card-body resultsSection">
+                    <p>Length of day: <span id="dayLengthText"></span></p>
+                    <p>Length of year: <span id="yearLengthText"></span></p>
+                    <p>Radius: <span id="radiusText"></span></p>
+                    <p>Number of Moons: <span id="moonNumText"></span></p>
+                    <p>Overview: <span id="overviewText"></span></p>
+                    <p>Potential for Life: <span id="lifeText"></span></p>
+                    <p>Naming: <span id="namingText"></span></p>
+                    <button class="btn" id="backBtn">Choose Another Planet</button>
+                </div>
+
+                <div class="card-body resultsSection">
+                    <span id="chosenDisplay"></span>
+                </div>
+
             </div>
 
-            <div class="card-body">
-                display chosen photo/video</div>
             <hr>
-            <div class="card-body">list photo/videos
-                <button class="btn">Images</button>
-                <button class="btn">Videos</button>
+
+            <div class="card-body">
+                <button class="btn" id="imageBtn">Images</button>
+                <button class="btn" id="videoBtn">Videos</button>
+
                 <div id="imageDiv"></div>
                 <div id="videoDiv"></div>
 
@@ -208,7 +205,6 @@
 
 
 
-
             
 
 
@@ -217,11 +213,16 @@
 
 
 
-        </div>
+    </div>
 
-        <div class="card" id="newsDiv">news articles
+    <div class="row">
+        <div class="col-md-12">
 
+            <div class="card" id="newsDiv">news articles
+
+            </div>
         </div>
+    </div>
 
 
 
