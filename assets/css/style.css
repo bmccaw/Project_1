@@ -1,10 +1,12 @@
 body {
     background-image: url("stary.jpg");
+    
 }
 #graphicDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
 }
+.social-media{float:left}
 #pollDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
