@@ -3,7 +3,7 @@ body {
     
 }
 #graphicDiv {
-    background: rgba(122, 122, 122, 0.5);
+    background-image: url("stary.jpg");
     margin-bottom: 20px;
 }
 .social-media{float:left}
@@ -100,8 +100,8 @@ p {
     margin-top: 200px;
     perspective: 1000px;
     perspective-origin: 60% 50%;
-    transform: rotate(-10deg);
-    right: 500px;
+    /* transform: rotate(10deg);  */
+    right: 320px;
     top: 100px;
 }
 .wrapper > div{
@@ -113,7 +113,7 @@ p {
 #sun {
     width: 250px;
     position: absolute;
-    top: -130px;;
+    top: -130px;
     left: 150px;
     z-index: 1;
     height: 125px !important;
@@ -134,19 +134,43 @@ p {
     animation-iteration-count: infinite;
     overflow:hidden;
 }
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent url(../images/shadow.png) 0% 0% no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
 #mercury {
     position: absolute;
     width: 400px;
     z-index: 2;
     animation: orbitmercury 12s infinite linear;
     top: -7.5px;
+    left: 50px;
 }
 #mercury .planet {
     width: 15px;
     height: 15px;
     border-radius: 15px;
     background-image: url(../images/mercury.png);
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
     animation: anti-spin 12s infinite linear;
+}
+#mercury .shadow {
+    animation: shadow 12s infinite;
+}
+#merc-text {
+    display:none;
+    color: white;
+}
+#mercury .planet:hover + #merc-text {
+    display: block;
 }
 #venus {
     position: absolute;
@@ -154,13 +178,27 @@ p {
     z-index: 3;
     animation: orbitvenus 15s infinite linear;
     top: -19px;
+    left: 50px;
 }
 #venus .planet {
-    width: 45px;
+    width: 38px;
     height: 38px;
     border-radius: 38px;
     background-image: url(../images/venus.png);
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
     animation: anti-spin 15s infinite linear;
+}
+#venus .shadow {
+    animation: shadow 15s infinite;
+}
+#ven-text {
+    display:none;
+    color: white;
+}
+#venus .planet:hover + #ven-text {
+    display: block;
 }
 #earth {
     position: absolute;
@@ -168,83 +206,165 @@ p {
     z-index: 4;
     animation: orbitearth 20s infinite linear;
     top: -20px;
+    left: 50px;
 }
 #earth .planet {
-    width: 45px;
+    width: 40px;
     height: 40px;
     border-radius: 40px;
     background-image: url(../images/earth.png);
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
     animation: anti-spin 20s infinite linear;
+}
+#earth .shadow {
+    animation: shadow 20s infinite;
+}
+#earth-text {
+    display:none;
+    color: white;
+}
+#earth .planet:hover + #earth-text {
+    display: block;
 }
 #mars {
     position: absolute;
-    width: 706px;
+    width: 650px;
     z-index: 5;
     animation: orbitmars 30s infinite linear;
     top: -11px;
+    left: -60px;
 }
 #mars .planet {
-    width: 25px;
+    width: 22px;
     height: 22px;
     border-radius: 22px;
     background-image: url(../images/mars.png);
+    background-size: inherit;
+    background-position: center;
+    background-repeat: no-repeat;
     animation: anti-spin 30s infinite linear;
+}
+#mars .shadow {
+    animation: shadow 30s infinite;
+}
+#mars-text {
+    display:none;
+    color: white;
+}
+#mars .planet:hover + #mars-text {
+    display: block;
 }
 #jupiter {
     position: absolute;
     width: 800px;
     z-index: 6;
     animation: orbitjupiter 50s infinite linear;
-    top: -64px;
+    top: -50px;
+    left: -80px;
 }
 #jupiter .planet {
-    width: 140px;
-    height: 128px;
-    border-radius: 128px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
     background-image: url(../images/jupiter.png);
+    background-size: inherit;
+    background-position: center;
     animation: anti-spin 50s infinite linear;
+}
+#jupiter .shadow {
+    animation: shadow 50s infinite;
+}
+#jup-text {
+    display:none;
+    color: white;
+}
+#jupiter .planet:hover + #jup-text {
+    display: block;
 }
 #saturn {
     position: absolute;
-    width: 1000px;
+    width: 900px;
     z-index: 7;
     animation: orbitsaturn 70s infinite linear;
     top: -50px;
-    left:-50px;
+    left:-100px;
 }
 #saturn .planet {
-    width: 230px;
-    height: 170px;
+    width: 90px;
+    height: 90px;
+    border-radius: 90px;
     background-image: url(../images/saturn.png);
+    background-size: inherit;
+    background-position: center;
     animation: anti-spin 70s infinite linear;
+}
+#saturn .shadow {
+    animation: shadow 70s infinite;
+}
+#sat-text {
+    display:none;
+    color: white;
+}
+#saturn .planet:hover + #sat-text {
+    display: block;
 }
 #uranus {
     position: absolute;
-    width: 900px;
+    width: 1000px;
     z-index: 8;
     animation: orbituranus 80s infinite linear;
-    top: -70;
+    top: -15px;
+    left: -150px;
 }
 #uranus .planet {
-    width: 55px;
+    width: 50px;
     height: 50px;
     border-radius:50px;
     background-image: url(../images/uranus.png);
+    background-size: inherit;
+    background-position: center;
     animation: anti-spin 80s infinite linear;
+}
+#uranus .shadow {
+    animation: shadow 80s infinite;
+}
+#ura-text {
+    display:none;
+    color: white;
+}
+#uranus .planet:hover + #ura-text {
+    display: block;
 }
 #neptune {
     position: absolute;
-    width: 1000px;
+    width: 1050px;
     z-index: 9;
     animation: orbitneptune 85s infinite linear;
-    top: -70;
+    top: -15px;
+    left: -200px;
+    /* border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%; */
 }
 #neptune .planet {
-    width: 55px;
+    width: 50px;
     height: 50px;
     border-radius:50px;
     background-image: url(../images/neptune.png);
+    background-size: inherit;
+    background-position: center;
     animation: anti-spin 85s infinite linear;
+}
+#nep-text {
+    display:none;
+    color: white;
+}
+#neptune .planet:hover + #nep-text{
+    display: block;
+}
+#neptune .shadow {
+    animation: shadow 85s infinite;
 }
 
 @keyframes sunrotate {
@@ -253,6 +373,23 @@ p {
     }
     100%{
         transform:rotate(-360deg);
+    }
+}
+@keyframes shadow {
+    0% {
+        background-position: 130% 0%;
+    }
+    33% {
+        background-position: 50% 0%;
+    }
+    55% {
+        background-position: 0% 0%;
+    }
+    80% {
+        background-position: -50% 0%;
+    }
+    100% {
+        background-position: -50% 0%;
     }
 }
 @keyframes orbitmercury {
