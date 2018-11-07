@@ -20,7 +20,8 @@ var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz"
     $("#submit").on("click", function() {
     
 if (randomGenerator==$("#num").val()){
-    $(".modal").hide()
+   // $(".modal").empty()
+    $(".modal").modal('toggle')
 }
 else{
     $("#modal-text").text("I'm sorry that was incorrect try again")
