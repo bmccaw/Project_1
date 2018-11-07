@@ -113,7 +113,7 @@ p {
 #sun {
     width: 250px;
     position: absolute;
-    top: -130px;;
+    top: -130px;
     left: 150px;
     z-index: 1;
     height: 125px !important;
@@ -165,6 +165,13 @@ p {
 #mercury .shadow {
     animation: shadow 12s infinite;
 }
+#merc-text {
+    display:none;
+    color: white;
+}
+#mercury .planet:hover + #merc-text {
+    display: block;
+}
 #venus {
     position: absolute;
     width: 506px;
@@ -185,6 +192,13 @@ p {
 }
 #venus .shadow {
     animation: shadow 15s infinite;
+}
+#ven-text {
+    display:none;
+    color: white;
+}
+#venus .planet:hover + #ven-text {
+    display: block;
 }
 #earth {
     position: absolute;
@@ -207,6 +221,13 @@ p {
 #earth .shadow {
     animation: shadow 20s infinite;
 }
+#earth-text {
+    display:none;
+    color: white;
+}
+#earth .planet:hover + #earth-text {
+    display: block;
+}
 #mars {
     position: absolute;
     width: 650px;
@@ -228,6 +249,13 @@ p {
 #mars .shadow {
     animation: shadow 30s infinite;
 }
+#mars-text {
+    display:none;
+    color: white;
+}
+#mars .planet:hover + #mars-text {
+    display: block;
+}
 #jupiter {
     position: absolute;
     width: 800px;
@@ -247,6 +275,13 @@ p {
 }
 #jupiter .shadow {
     animation: shadow 50s infinite;
+}
+#jup-text {
+    display:none;
+    color: white;
+}
+#jupiter .planet:hover + #jup-text {
+    display: block;
 }
 #saturn {
     position: absolute;
@@ -268,6 +303,13 @@ p {
 #saturn .shadow {
     animation: shadow 70s infinite;
 }
+#sat-text {
+    display:none;
+    color: white;
+}
+#saturn .planet:hover + #sat-text {
+    display: block;
+}
 #uranus {
     position: absolute;
     width: 1000px;
@@ -288,6 +330,13 @@ p {
 #uranus .shadow {
     animation: shadow 80s infinite;
 }
+#ura-text {
+    display:none;
+    color: white;
+}
+#uranus .planet:hover + #ura-text {
+    display: block;
+}
 #neptune {
     position: absolute;
     width: 1050px;
@@ -306,6 +355,13 @@ p {
     background-size: inherit;
     background-position: center;
     animation: anti-spin 85s infinite linear;
+}
+#nep-text {
+    display:none;
+    color: white;
+}
+#neptune .planet:hover + #nep-text{
+    display: block;
 }
 #neptune .shadow {
     animation: shadow 85s infinite;
