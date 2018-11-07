@@ -252,8 +252,12 @@ $(".clickPlanet").click(function () {
 
     // display main planet image as background
     // var mainImage = $("<img>").attr("src", "assets/images/" + chosenPlanet + ".png")
-    $(".resultsSection").css("background-image", "url(assets/images/earth.png)");
 
+    $(".resultsSection").css("background-image", "url(assets/images/"+chosenPlanet+".png)");
+
+
+
+    // $("#mainImage").attr("src", "url(assets/images/ "+chosenPlanet+" .png");
 
     //pull images from api and connect to dom
     var imageQueryURL = "https://images-api.nasa.gov/search?q=" + chosenPlanet + "&media_type=image";
@@ -319,8 +323,8 @@ $(".clickPlanet").click(function () {
 
     var newsQueryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     newsQueryURL += '?' + $.param({
-        'api-key': "bf393ccfe12c46df99b019707f2a1d65",
-        'q': chosenPlanet
+        "api-key": "bf393ccfe12c46df99b019707f2a1d65",
+        "q": chosenPlanet
     });
 
     $.ajax({

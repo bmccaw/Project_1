@@ -18,6 +18,13 @@ body {
     margin-right:5px;
     margin-left:20px;
 }
+#resultsDiv p{
+    font-size: 20px;
+}
+#resultsDiv span{
+    font-size: 15px;
+    color:lightblue;
+}
 #newsDiv {
     background: rgba(122, 122, 122, 0.5);
 }
@@ -568,10 +575,13 @@ p {
 
 /*reults div css*/
 .resultImages, .resultVideos{
-    width:200px;
-    padding:5px;
+    max-width:250px;
+    max-height: 200px;
+    padding:10px;
 }
 .resultsSection{
 background-size: cover;
-
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
 }
