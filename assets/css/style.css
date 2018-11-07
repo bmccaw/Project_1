@@ -8,10 +8,13 @@ body {
 #pollDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
+    margin-right:5px;
 }
 #resultsDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
+    margin-right:5px;
+    margin-left:20px;
 }
 #newsDiv {
     background: rgba(122, 122, 122, 0.5);
@@ -90,6 +93,7 @@ p {
 .jumbotron{
     background: rgba(122, 122, 122, 0.5);
 }
+
 /* Planet animation code goes here */
 .wrapper {
     position:relative;
@@ -427,4 +431,8 @@ p {
 .resultImages, .resultVideos{
     width:200px;
     padding:5px;
+}
+.resultsSection{
+background-size: cover;
+
 }

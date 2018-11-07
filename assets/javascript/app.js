@@ -225,9 +225,14 @@ $(".clickPlanet").click(function () {
     $("#lifeText").text(planetData[chosenPlanet].life);
     $("#namingText").text(planetData[chosenPlanet].naming);
 
-    //display main planet image
-    var mainImage = $("<img>").attr("src", "assets/images/" + chosenPlanet + ".png")
-    $("#chosenDisplay").html(mainImage);
+    // //display main planet image
+    // var mainImage = $("<img>").attr("src", "assets/images/" + chosenPlanet + ".png")
+    // $("#chosenDisplay").html(mainImage);
+
+    // display main planet image as background
+    // var mainImage = $("<img>").attr("src", "assets/images/" + chosenPlanet + ".png")
+    $(".resultsSection").css("background-image", "url(assets/images/earth.png)");
+
 
     //pull images from api and connect to dom
     var imageQueryURL = "https://images-api.nasa.gov/search?q=" + chosenPlanet + "&media_type=image";
@@ -262,24 +267,24 @@ $(".clickPlanet").click(function () {
 
             };
 
-            //change display image to specific result image when clicked
-            $(".resultImages").click(function () {
+            // //change display image to specific result image when clicked
+            // $(".resultImages").click(function () {
 
-                var chosenImage = $("<img>").attr("src", $(this).attr("src"))
-                $("#chosenDisplay").html(chosenImage);
-            });
+            //     var chosenImage = $("<img>").attr("src", $(this).attr("src"))
+            //     $("#chosenDisplay").html(chosenImage);
+            // });
 
-            //change display image to specific result video when clicked
-            $(".resultVideos").click(function () {
+            // //change display image to specific result video when clicked
+            // $(".resultVideos").click(function () {
 
-                var chosenVideo = $("<video>")
-                    .attr("src", $(this).attr("src"))
-                    .attr("type", "video/mp4")
-                    .attr("controls", "play")
-                    .attr("controls", "pause");
+            //     var chosenVideo = $("<video>")
+            //         .attr("src", $(this).attr("src"))
+            //         .attr("type", "video/mp4")
+            //         .attr("controls", "play")
+            //         .attr("controls", "pause");
 
-                $("#chosenDisplay").html(chosenVideo);
-            });
+            //     $("#chosenDisplay").html(chosenVideo);
+            // });
 
         });
 
