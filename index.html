@@ -5,7 +5,8 @@
 <!--links for media sharing-->
 
 <!--link to font awesome-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 <!-- link bottstrap -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 <!-- link css page -->
@@ -38,9 +39,15 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>Enter the code below and click submit.</p>
+                    <p id="modal-text">Enter the code below and click submit.</p>
                 </div>
                 <div id="randomNum"></div>
+                <form>
+                    <div class="form-group">
+                        <label>Type the code here</label>
+                        <input type="text" class="form-control" id="num" placeholder="">
+                    </div>
+                </form>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" id="submit">Submit</button>
@@ -148,8 +155,8 @@
         </div>
 
         <div class="card" id="pollDiv">
-           
-<br>
+
+            <br>
             <div class="custom-control custom-radio">
                 <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
 
@@ -188,24 +195,30 @@
                 </div>
                 <br>
                 <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
-                </div>
-                <div id = "poll-results" style="color: rgb(64, 247, 47)">
-                    <div>How well did your planet do?</div>
-                    <div id="mercury-percent"></div>
-                    <div id="venus-percent"></div>
-                    <div id="earth-percent"></div>
-                    <div id="mars-percent"></div>
-                    <div id="jupiter-percent"></div>
-                    <div id="saturn-percent"></div>
-                    <div id="uranus-percent"></div>
-                    <div id="neptune-percent"></div>
-                   
-                </div>
+            </div>
+            <div id="poll-results" style="color: rgb(64, 247, 47)">
+                <div>How well did your planet do?</div>
+                <div id="mercury-percent"></div>
+                <div id="venus-percent"></div>
+                <div id="earth-percent"></div>
+                <div id="mars-percent"></div>
+                <div id="jupiter-percent"></div>
+                <div id="saturn-percent"></div>
+                <div id="uranus-percent"></div>
+                <div id="neptune-percent"></div>
+                <ul class="social">
+
+            </div>
 
 
 
 
-            
+
+
+
+
+
+
 
 
 
@@ -215,20 +228,61 @@
 
     </div>
 
+
+       
+        <div class="card" id="newsDiv">news articles
     <div class="row">
         <div class="col-md-12">
 
             <div class="card" id="newsDiv">news articles
 
+
             </div>
         </div>
+
+        <div class = "row text-center">
+            <div class="col-md-3"></div>
+<div class = "col-md-2">
+        <li class="soc">
+            <a href="http://twitter.com/intent/tweet?text=Planets%20are%20amazing!%20Click%20here%20to%20learn%20some%20amazing%20facts!:%20https://bmccaw.github.io/Project_1/"
+                title="">
+                <span class="icon-big icon fab fa-twitter"></span>
+            </a>
+        </li>
+        </div>
+        <div class = "col-md-2">
+        <li>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=https://bmccaw.github.io/Project_1/" title="">
+                <span class=" icon-big icon fab fa-facebook"></span>
+            </a>
+        </li>
+        </div>
+        <!-- <li>
+            <a href="https://plus.google.com/" title="">
+              <span class="icon fab fa-google-plus"></span>
+            </a>
+          </li> -->
+          <div class = "col-md-2">
+        <li class="soc">
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://bmccaw.github.io/Project_1/" title="">
+                <span  class="icon-big  icon fab fa-linkedin"></span>
+            </a>
+        </li>
+        <div class ="col-md-3"
+        </div>
+
+        </ul>
+        </div>
+        </div>
+
     </div>
+
 
 
 
         <!-- link js page -->
         <script src="jquery.js"></script>
-    <script src="jssocials.min.js"></script>
+        <script src="jssocials.min.js"></script>
         <script src="assets/javascript/app.js"></script>
 
 

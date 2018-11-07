@@ -2,6 +2,7 @@ body {
     background-image: url("stary.jpg");
     
 }
+#randomNum{color:rgb(64, 247, 47);}
 #graphicDiv {
     background-image: url("stary.jpg");
     margin-bottom: 20px;
@@ -360,6 +361,11 @@ p {
     background-position: center;
     animation: anti-spin 85s infinite linear;
 }
+.icon-big{ 
+    font-size:25px
+}
+.icon-big:hover{font-size:50px}
+
 #nep-text {
     display:none;
     color: white;
