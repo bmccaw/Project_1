@@ -247,6 +247,10 @@ p {
     background-image: url(../images/neptune.png);
     animation: anti-spin 85s infinite linear;
 }
+.icon-big{ 
+    font-size:25px
+}
+.icon-big:hover{font-size:50px}
 
 @keyframes sunrotate {
     0%{
