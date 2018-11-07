@@ -51,27 +51,27 @@ var config = {
 firebase.initializeApp(config);
 var database = firebase.database();
 
-if(mercuryTotal != null) {
-database.ref().on("value", function (snapshot) {
-    mercuryTotal = snapshot.val().mercury
-    venusTotal = snapshot.val().venus
-    earthTotal = snapshot.val().earth
-    marsTotal = snapshot.val().mars
-    jupiterTotal = snapshot.val().jupiter
-    saturnTotal = snapshot.val().saturn
-    uranusTotal = snapshot.val().uranus
-    neptuneTotal = snapshot.val().neptune
-    total = snapshot.val().planetTotal
-    mercuryPercent = parseInt(mercuryTotal) / parseInt(total) * 100
-    venusPercent = parseInt(venusTotal) / parseInt(total) * 100
-    console.log(venusPercent)
-    earthPercent = parseInt(earthTotal) / parseInt(total) * 100
-    marsPercent = parseInt(marsTotal) / parseInt(total) * 100
-    jupiterPercent = parseInt(jupiterTotal) / parseInt(total) * 100
-    saturnPercent = parseInt(saturnTotal) / parseInt(total) * 100
-    uranusPercent = parseInt(uranusTotal) / parseInt(total) * 100
-    neptunePercent = parseInt(neptuneTotal) / parseInt(total) * 100
-})
+if (mercuryTotal != null) {
+    database.ref().on("value", function (snapshot) {
+        mercuryTotal = snapshot.val().mercury
+        venusTotal = snapshot.val().venus
+        earthTotal = snapshot.val().earth
+        marsTotal = snapshot.val().mars
+        jupiterTotal = snapshot.val().jupiter
+        saturnTotal = snapshot.val().saturn
+        uranusTotal = snapshot.val().uranus
+        neptuneTotal = snapshot.val().neptune
+        total = snapshot.val().planetTotal
+        mercuryPercent = parseInt(mercuryTotal) / parseInt(total) * 100
+        venusPercent = parseInt(venusTotal) / parseInt(total) * 100
+        console.log(venusPercent)
+        earthPercent = parseInt(earthTotal) / parseInt(total) * 100
+        marsPercent = parseInt(marsTotal) / parseInt(total) * 100
+        jupiterPercent = parseInt(jupiterTotal) / parseInt(total) * 100
+        saturnPercent = parseInt(saturnTotal) / parseInt(total) * 100
+        uranusPercent = parseInt(uranusTotal) / parseInt(total) * 100
+        neptunePercent = parseInt(neptuneTotal) / parseInt(total) * 100
+    })
 
 }
 
@@ -116,10 +116,10 @@ $(document).on("click", "#enter", function (event) {
     console.log("total" + total)
     console.log(mercuryTotal)
 
-        
 
 
- 
+
+
 
     database.ref().set({
 
@@ -335,6 +335,24 @@ $(".clickPlanet").click(function () {
 
         $("#chosenDisplay").html(mainImage);
     });
+
+    //news div
+
+    var newsQueryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+    newsQueryURL += '?' + $.param({
+        'api-key': "bf393ccfe12c46df99b019707f2a1d65",
+        'q': chosenPlanet
+    });
+
+    $.ajax({
+        url: newsQueryURL,
+        method: "GET"
+    })
+        .then(function (newsResponse) {
+            console.log(newsResponse);
+        });
+
+
 
 });
 
