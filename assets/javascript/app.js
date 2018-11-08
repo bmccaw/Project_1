@@ -4,6 +4,8 @@ $(window).ready(function () {
     $('#onLoad').modal('show');
 
     //hide content
+    // $('.jumbotron').hide();
+    // $('#graphicDiv').hide();
     $("#resultsDiv").hide();
     $("#pollDiv").hide();
     $("#newsDiv").hide();
@@ -21,6 +23,8 @@ var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz"
     
 if (randomGenerator==$("#num").val()){
     $(".modal").hide()
+    // $('#graphicDiv').fadeIn();
+    // $('.jumbotron').fadeIn();
 }
 else{
     $("#modal-text").text("I'm sorry that was incorrect try again")
@@ -28,8 +32,7 @@ else{
 
 
     })
-
-
+     
 $("#poll-results").hide()
 let mercuryTotal = 0;
 let venusTotal = 0;
@@ -294,20 +297,33 @@ $(".clickPlanet").click(function () {
 
                 $("#imageDiv").append(imageSet);
             }
-            //image gallery code goes here
-            $('#imageDiv').nanoGallery({
-                thumbnailWidth:100,thumbnailHeight:100,
-                items: {
-                    //img url
-                    src: nasaResults [i].links[0].href,
-                    //thumbnail url
-                    srct: nasaResults [i].links[0].href,
-                    //title
-                    title: nasaResults [i].data[0].description,
-                    //description
-                    description: nasaResults [i].data[0].description,
-                }
-            });
+            //image gallery code goes here --- currently not working and disables scroll by adding an overflow:hidden style to body (not sure why)
+            // $('#imageDiv').nanoGallery({
+            //     thumbnailWidth:200,thumbnailHeight:'auto', itemBaseURL: 'https://images-api.nasa.gov',
+            //     items: [
+            //         {
+            //         //img url
+            //         src: nasaResults[i].links[0].href,
+            //         //thumbnail url
+            //         srct: nasaResults[i].links[0].href,
+            //         //title
+            //         title: nasaResults[i].data[0].description,
+            //         //description
+            //         description: nasaResults[i].data[0].description,
+            //     },
+            //     {
+            //         //img url
+            //         src: nasaResults[i].links[0].href,
+            //         //thumbnail url
+            //         srct: nasaResults[i].links[0].href,
+            //         //title
+            //         title: nasaResults[i].data[0].description,
+            //         //description
+            //         description: nasaResults[i].data[0].description,
+            //     }
+            // ]
+            // }); console.log(nasaResults[i].data[0].description)
+        
             //END IMAGE GALLERY CODE
 
             //get videos for chosen planet and connect to dom
