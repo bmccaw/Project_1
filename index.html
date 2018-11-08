@@ -5,7 +5,8 @@
 <!--links for media sharing-->
 
 <!--link to font awesome-->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
 <!-- link bottstrap -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
 <!-- link css page -->
@@ -56,7 +57,7 @@
             <div class="card" id="graphicDiv" style="height: 40rem;">
 
                 <div class="wrapper">
-                    <div id="sun">
+                    <div id="sun" class="clickPlanet">
                         <div class="star"></div>
                     </div>
                     <div id="mercury" class="clickPlanet">
@@ -67,43 +68,43 @@
                     </div>
                     <div id="venus" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="ven-text">Venus</span>
                     </div>
                     <div id="earth" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="earth-text">Earth</span>
                     </div>
                     <div id="mars" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="mars-text">Mars</span>
                     </div>
                     <div id="jupiter" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="jup-text">Jupiter</span>
                     </div>
                     <div id="saturn" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="sat-text">Saturn</span>
                     </div>
                     <div id="uranus" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="ura-text">Uranus</span>
                     </div>
                     <div id="neptune" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="nep-text">Neptune</span>
                     </div>
@@ -119,33 +120,43 @@
 
             <div class="row">
                 <div class="card-body resultsSection">
-                    <p>Length of day: <span id="dayLengthText"></span></p>
-                    <p>Length of year: <span id="yearLengthText"></span></p>
+                    <p class="timeLengths">Length of day: <span id="dayLengthText"></span></p>
+                    <p class="timeLengths">Length of year: <span id="yearLengthText"></span></p>
                     <p>Radius: <span id="radiusText"></span></p>
                     <p>Number of Moons: <span id="moonNumText"></span></p>
                     <p>Naming: <span id="namingText"></span></p>
                     <p>Overview: <span id="overviewText"></span></p>
                     <p>Potential for Life: <span id="lifeText"></span></p>
-                    <button class="btn" id="backBtn">Choose Another Planet</button>
+                    <button class="btn btn-dark" id="backBtn">Choose Another Planet</button>
+
+                    <div id="backgroundDiv"></div>
                 </div>
+
 
             </div>
 
             <hr>
 
             <div class="card-body">
-                <button class="btn" id="imageBtn">Images</button>
-                <button class="btn" id="videoBtn">Videos</button>
+                <button class="btn btn-dark" id="imageBtn">Images</button>
+                <button class="btn btn-dark" id="videoBtn">Videos</button>
 
-                <div id="imageDiv"></div>
-                <div id="videoDiv"></div>
+                <div>
+                    <div id="imageDiv">
+                        <br>
+                    </div>
+                    <button class="btn btn-dark" id="moreImagesBtn">Load More Images</button>
+                </div>
+                <div id="videoDiv">
+                    <br>
+                </div>
 
             </div>
         </div>
 
         <div class="card" id="pollDiv">
-           
-<br>
+
+            <br>
             <div class="custom-control custom-radio">
                 <div class="card-header" id="planet-picker">Pick your favorite Planet!</div>
 
@@ -184,47 +195,47 @@
                 </div>
                 <br>
                 <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
-                </div>
-                <div id = "poll-results" style="color: rgb(64, 247, 47)">
-                    <div>How well did your planet do?</div>
-                    <div id="mercury-percent"></div>
-                    <div id="venus-percent"></div>
-                    <div id="earth-percent"></div>
-                    <div id="mars-percent"></div>
-                    <div id="jupiter-percent"></div>
-                    <div id="saturn-percent"></div>
-                    <div id="uranus-percent"></div>
-                    <div id="neptune-percent"></div>
-                   
-                </div>
-
-
-
-
-            
-
-
-
-
-
-
-
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-
-            <div class="card" id="newsDiv">news articles
+            </div>
+            <div id="poll-results" style="color: rgb(64, 247, 47)">
+                <div>How well did your planet do?</div>
+                <div id="mercury-percent"></div>
+                <div id="venus-percent"></div>
+                <div id="earth-percent"></div>
+                <div id="mars-percent"></div>
+                <div id="jupiter-percent"></div>
+                <div id="saturn-percent"></div>
+                <div id="uranus-percent"></div>
+                <div id="neptune-percent"></div>
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="card" id="newsDiv">news articles
+
+                </div>
+            </div>
+        </div>
 
 
 
         <!-- link js page -->
         <script src="jquery.js"></script>
-    <script src="jssocials.min.js"></script>
+        <script src="jssocials.min.js"></script>
         <script src="assets/javascript/app.js"></script>
 
 
