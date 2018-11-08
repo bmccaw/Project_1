@@ -11,5 +11,6 @@ Current functionality
 
 Directions for further work
 ===============================
-- Change the poll weekly with different questions for the communit to vote on
+- Change the poll weekly with different questions for the community to vote on
 - Enhance functionality of the planetary graphic to provide more information
+- Animate divs to create more fluid transitions
