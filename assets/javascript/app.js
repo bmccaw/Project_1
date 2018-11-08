@@ -294,6 +294,21 @@ $(".clickPlanet").click(function () {
 
                 $("#imageDiv").append(imageSet);
             }
+            //image gallery code goes here
+            $('#imageDiv').nanoGallery({
+                thumbnailWidth:100,thumbnailHeight:100,
+                items: {
+                    //img url
+                    src: nasaResults [i].links[0].href,
+                    //thumbnail url
+                    srct: nasaResults [i].links[0].href,
+                    //title
+                    title: nasaResults [i].data[0].description,
+                    //description
+                    description: nasaResults [i].data[0].description,
+                }
+            });
+            //END IMAGE GALLERY CODE
 
             //get videos for chosen planet and connect to dom
             for (i = 0; i < 3; i++) {
