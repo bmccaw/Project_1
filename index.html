@@ -29,6 +29,7 @@
 </head>
 
 <body>
+        
     <div class="modal" id="onLoad" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -39,12 +40,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p id="modal-text">Enter the code below and click submit.</p>
+                    <p id="modal-text">Enter the code below and click submit to confirm your humanity.</p>
                 </div>
-                <div id="randomNum"></div>
+                <div style="color:(64, 247, 47); border:1px; border-style:inset; text-align:center" id="randomNum"></div>
                 <form>
                     <div class="form-group">
-                        <label>Type the code here</label>
+                        <label id="modal-command">Type the code here</label>
                         <input type="text" class="form-control" id="num" placeholder="">
                     </div>
                 </form>
@@ -55,6 +56,7 @@
             </div>
         </div>
     </div>
+    <audio id="scifi-music" src="assets/sounds/Lost-Meadow.mp3" preload="auto"></audio>
     <h1 class="jumbotron">Planet Exploration</h1>
 
 
@@ -210,9 +212,60 @@
                 <br>
                 <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
             </div>
-            <div id="poll-results" style="color: rgb(64, 247, 47)">
-                <div>How well did your planet do?</div>
-                <div id="mercury-percent"></div>
+            <div class=" whole-poll" id="poll-results" style="color: rgb(64, 247, 47)">
+               
+                
+                <table id="poll-table">
+                    <tr>
+                        
+                        <div class="card-head">How well did your planet do?</div>
+                    
+                    </tr>
+                        <tr>
+                        
+                   <td class= "planet-label">Mercury</td>
+                        <td class="percent-holder"> <div class="bar" id="mercury-bar">       </div> 
+                        
+                        <p id="mercury-percent"> </p></td>
+                    </tr>
+                    
+                    <tr>
+                   <td class= "planet-label">Venus</td>
+                        <td class="percent-holder"> <div class="bar" id="venus-bar">   </div>     
+                        <p id="venus-percent"> </p> </td>
+                    </tr>
+                     <tr >
+                   <td class= "planet-label">Earth</td>
+                        <td class="percent-holder"> <div class="bar" id="earth-bar">     </div>
+                        <p id="earth-percent"> </p> </td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Mars</td>
+                        <td class="percent-holder"> <div class="bar" id="mars-bar">       </div>
+                        <p id="mars-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Jupiter</td>
+                        <td class="percent-holder"> <div class="bar" id="jupiter-bar">        </div>
+                        <p id="jupiter-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Saturn</td>
+                        <td class="percent-holder"> <div class="bar" id="saturn-bar">        </div>
+                        <p id="saturn-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Uranus</td>
+                        <td class="percent-holder"> <div class="bar" id="uranus-bar">        </div>
+                        <p id="uranus-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Neptune</td>
+                        <td class="percent-holder"> <div class="bar" id="neptune-bar">       </div>
+                        <p id="neptune-percent"> </p> </td>
+                    </tr> 
+                </table>
+                <!-- <div id="mercury-percent"></div>
                 <div id="venus-percent"></div>
                 <div id="earth-percent"></div>
                 <div id="mars-percent"></div>
@@ -220,7 +273,7 @@
                 <div id="saturn-percent"></div>
                 <div id="uranus-percent"></div>
                 <div id="neptune-percent"></div>
-                <ul class="social">
+                <ul class="social"> -->
 
             </div>
 
