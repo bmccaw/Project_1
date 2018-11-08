@@ -284,7 +284,7 @@ $(".clickPlanet").click(function () {
         method: "GET"
     })
         .then(function (nasaResponse) {
-
+            console.log(nasaResponse);
             var nasaResults = nasaResponse.collection.items;
 
             for (i = 0; i < 10; i++) {
