@@ -32,12 +32,7 @@ else{
 
 
     })
-     //Typed.js
-     var typed = new Typed('#typed', {
-        stringsElement: '#title'
-      });
-
-
+     
 $("#poll-results").hide()
 let mercuryTotal = 0;
 let venusTotal = 0;
