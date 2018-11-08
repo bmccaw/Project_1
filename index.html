@@ -29,6 +29,7 @@
 </head>
 
 <body>
+        
     <div class="modal" id="onLoad" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -39,12 +40,12 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p id="modal-text">Enter the code below and click submit.</p>
+                    <p id="modal-text">Enter the code below and click submit to confirm your humanity.</p>
                 </div>
-                <div id="randomNum"></div>
+                <div style="color:(64, 247, 47); border:1px; border-style:inset; text-align:center" id="randomNum"></div>
                 <form>
                     <div class="form-group">
-                        <label>Type the code here</label>
+                        <label id="modal-command">Type the code here</label>
                         <input type="text" class="form-control" id="num" placeholder="">
                     </div>
                 </form>
@@ -55,6 +56,7 @@
             </div>
         </div>
     </div>
+    <audio id="scifi-music" src="assets/sounds/Lost-Meadow.mp3" preload="auto"></audio>
     <h1 class="jumbotron">Planet Exploration</h1>
 
 
@@ -74,43 +76,43 @@
                     </div>
                     <div id="venus" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="ven-text">Venus</span>
                     </div>
                     <div id="earth" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="earth-text">Earth</span>
                     </div>
                     <div id="mars" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="mars-text">Mars</span>
                     </div>
                     <div id="jupiter" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="jup-text">Jupiter</span>
                     </div>
                     <div id="saturn" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="sat-text">Saturn</span>
                     </div>
                     <div id="uranus" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="ura-text">Uranus</span>
                     </div>
                     <div id="neptune" class="clickPlanet">
                         <div class="planet">
-                                <div class="shadow"></div>
+                            <div class="shadow"></div>
                         </div>
                         <span id="nep-text">Neptune</span>
                     </div>
@@ -126,13 +128,27 @@
 
             <div class="row">
                 <div class="card-body resultsSection">
-                    <p>Length of day: <span id="dayLengthText"></span></p>
-                    <p>Length of year: <span id="yearLengthText"></span></p>
-                    <p>Radius: <span id="radiusText"></span></p>
-                    <p>Number of Moons: <span id="moonNumText"></span></p>
-                    <p>Overview: <span id="overviewText"></span></p>
-                    <p>Potential for Life: <span id="lifeText"></span></p>
-                    <p>Naming: <span id="namingText"></span></p>
+                    <p>Length of day:
+                        <span id="dayLengthText"></span>
+                    </p>
+                    <p>Length of year:
+                        <span id="yearLengthText"></span>
+                    </p>
+                    <p>Radius:
+                        <span id="radiusText"></span>
+                    </p>
+                    <p>Number of Moons:
+                        <span id="moonNumText"></span>
+                    </p>
+                    <p>Overview:
+                        <span id="overviewText"></span>
+                    </p>
+                    <p>Potential for Life:
+                        <span id="lifeText"></span>
+                    </p>
+                    <p>Naming:
+                        <span id="namingText"></span>
+                    </p>
                     <button class="btn" id="backBtn">Choose Another Planet</button>
                 </div>
 
@@ -196,9 +212,60 @@
                 <br>
                 <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
             </div>
-            <div id="poll-results" style="color: rgb(64, 247, 47)">
-                <div>How well did your planet do?</div>
-                <div id="mercury-percent"></div>
+            <div class=" whole-poll" id="poll-results" style="color: rgb(64, 247, 47)">
+               
+                
+                <table id="poll-table">
+                    <tr>
+                        
+                        <div class="card-head">How well did your planet do?</div>
+                    
+                    </tr>
+                        <tr>
+                        
+                   <td class= "planet-label">Mercury</td>
+                        <td class="percent-holder"> <div class="bar" id="mercury-bar">       </div> 
+                        
+                        <p id="mercury-percent"> </p></td>
+                    </tr>
+                    
+                    <tr>
+                   <td class= "planet-label">Venus</td>
+                        <td class="percent-holder"> <div class="bar" id="venus-bar">   </div>     
+                        <p id="venus-percent"> </p> </td>
+                    </tr>
+                     <tr >
+                   <td class= "planet-label">Earth</td>
+                        <td class="percent-holder"> <div class="bar" id="earth-bar">     </div>
+                        <p id="earth-percent"> </p> </td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Mars</td>
+                        <td class="percent-holder"> <div class="bar" id="mars-bar">       </div>
+                        <p id="mars-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Jupiter</td>
+                        <td class="percent-holder"> <div class="bar" id="jupiter-bar">        </div>
+                        <p id="jupiter-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Saturn</td>
+                        <td class="percent-holder"> <div class="bar" id="saturn-bar">        </div>
+                        <p id="saturn-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Uranus</td>
+                        <td class="percent-holder"> <div class="bar" id="uranus-bar">        </div>
+                        <p id="uranus-percent"> </p></td>
+                    </tr>
+                    <tr>
+                   <td class= "planet-label">Neptune</td>
+                        <td class="percent-holder"> <div class="bar" id="neptune-bar">       </div>
+                        <p id="neptune-percent"> </p> </td>
+                    </tr> 
+                </table>
+                <!-- <div id="mercury-percent"></div>
                 <div id="venus-percent"></div>
                 <div id="earth-percent"></div>
                 <div id="mars-percent"></div>
@@ -206,7 +273,7 @@
                 <div id="saturn-percent"></div>
                 <div id="uranus-percent"></div>
                 <div id="neptune-percent"></div>
-                <ul class="social">
+                <ul class="social"> -->
 
             </div>
 
@@ -226,64 +293,57 @@
 
 
 
-    </div>
 
+        </div>
 
-       
-        <div class="card" id="newsDiv">news articles
-    <div class="row">
-        <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-12">
 
-            <div class="card" id="newsDiv">news articles
+                <div class="card" id="newsDiv">news articles
 
-
+                </div>
             </div>
-        </div>
-
-        <div class = "row text-center">
-            <div class="col-md-3"></div>
-<div class = "col-md-2">
-        <li class="soc">
-            <a href="http://twitter.com/intent/tweet?text=Planets%20are%20amazing!%20Click%20here%20to%20learn%20some%20amazing%20facts!:%20https://bmccaw.github.io/Project_1/"
-                title="">
-                <span class="icon-big icon fab fa-twitter"></span>
-            </a>
-        </li>
-        </div>
-        <div class = "col-md-2">
-        <li>
-            <a href="http://www.facebook.com/sharer/sharer.php?u=https://bmccaw.github.io/Project_1/" title="">
-                <span class=" icon-big icon fab fa-facebook"></span>
-            </a>
-        </li>
-        </div>
-        <!-- <li>
+            <div class="row text-center">
+                <div class="col-md-3"></div>
+                <div class="col-md-2">
+                    <li class="soc">
+                        <a href="http://twitter.com/intent/tweet?text=Planets%20are%20amazing!%20Click%20here%20to%20learn%20some%20amazing%20facts!:%20https://bmccaw.github.io/Project_1/"
+                            title="">
+                            <span class="icon-big icon fab fa-twitter"></span>
+                        </a>
+                    </li>
+                </div>
+                <div class="col-md-2">
+                    <li>
+                        <a href="http://www.facebook.com/sharer/sharer.php?u=https://bmccaw.github.io/Project_1/" title="">
+                            <span class=" icon-big icon fab fa-facebook"></span>
+                        </a>
+                    </li>
+                </div>
+                <!-- <li>
             <a href="https://plus.google.com/" title="">
               <span class="icon fab fa-google-plus"></span>
             </a>
           </li> -->
-          <div class = "col-md-2">
-        <li class="soc">
-            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://bmccaw.github.io/Project_1/" title="">
-                <span  class="icon-big  icon fab fa-linkedin"></span>
-            </a>
-        </li>
-        <div class ="col-md-3"
-        </div>
+                <div class="col-md-2">
+                    <li class="soc">
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://bmccaw.github.io/Project_1/" title="">
+                            <span class="icon-big  icon fab fa-linkedin"></span>
+                        </a>
+                    </li>
+                    <div class="col-md-3" </div>
 
-        </ul>
-        </div>
-        </div>
-
-    </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
 
 
-
-        <!-- link js page -->
-        <script src="jquery.js"></script>
-        <script src="jssocials.min.js"></script>
-        <script src="assets/javascript/app.js"></script>
+            <!-- link js page -->
+            <script src="jquery.js"></script>
+            <script src="jssocials.min.js"></script>
+            <script src="assets/javascript/app.js"></script>
 
 
 </body>

@@ -2,6 +2,7 @@
 //OnLoad Modal
 $(window).ready(function () {
     $('#onLoad').modal('show');
+   // $("#scifi-music").play()
 
     //hide content
     $("#resultsDiv").hide();
@@ -10,24 +11,26 @@ $(window).ready(function () {
 });
 
 var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
-	var charactersLength = 7;
-	var randomGenerator = '';
-	for (var i=0; i<charactersLength; i++) {
-		var rnum = Math.floor(Math.random() * characters.length);
-		randomGenerator += characters.substring(rnum,rnum+1);
+var charactersLength = 7;
+var randomGenerator = '';
+for (var i = 0; i < charactersLength; i++) {
+    var rnum = Math.floor(Math.random() * characters.length);
+    randomGenerator += characters.substring(rnum, rnum + 1);
+}
+$("#randomNum").text(randomGenerator)
+
+$("#submit").on("click", function () {
+
+    if (randomGenerator == $("#num").val()) {
+        // $(".modal").empty()
+        $(".modal").modal('toggle')
+
     }
-    $("#randomNum").text(randomGenerator)
-    $("#submit").on("click", function() {
-    
-if (randomGenerator==$("#num").val()){
-    $(".modal").hide()
-}
-else{
-    $("#modal-text").text("I'm sorry that was incorrect try again")
-}
+    else {
+        $("#modal-text").text("Are you a human Imposter! Try again!")
+    }
 
-
-    })
+})
 
 
 $("#poll-results").hide()
@@ -133,15 +136,25 @@ $(document).on("click", "#enter", function (event) {
         neptune: neptuneTotal,
         planetTotal: total,
     })
-    $("#mercury-percent").text("Mercury: " + Math.round(mercuryPercent) + "%")
-    $("#venus-percent").text("Venus: " + Math.round(venusPercent) + "%")
-    $("#earth-percent").text("Earth: " + Math.round(earthPercent) + "%")
-    $("#mars-percent").text("Mars: " + Math.round(marsPercent) + "%")
-    $("#jupiter-percent").text("Jupiter: " + Math.round(jupiterPercent) + "%")
-    $("#saturn-percent").text("Saturn: " + Math.round(saturnPercent) + "%")
-    $("#uranus-percent").text("Uranus: " + Math.round(uranusPercent) + "%")
-    $("#neptune-percent").text("Neptune: " + Math.round(neptunePercent) + "%")
+    var t = parseInt(Math.round(mercuryPercent)) * 2
+    console.log(t)
+    $("#mercury-percent").text(Math.round(mercuryPercent) + "%")
+    $("#venus-percent").text(Math.round(venusPercent) + "%")
+    $("#earth-percent").text(Math.round(earthPercent) + "%")
+    $("#mars-percent").text(Math.round(marsPercent) + "%")
+    $("#jupiter-percent").text(Math.round(jupiterPercent) + "%")
+    $("#saturn-percent").text(Math.round(saturnPercent) + "%")
+    $("#uranus-percent").text(Math.round(uranusPercent) + "%")
+    $("#neptune-percent").text(Math.round(neptunePercent) + "%")
 
+    $("#mercury-bar").css("width", parseInt(Math.round(mercuryPercent)) * 5 + "px")
+    $("#venus-bar").css("width", parseInt(Math.round(venusPercent)) * 5 + "px")
+    $("#earth-bar").css("width", parseInt(Math.round(earthPercent)) * 5 + "px")
+    $("#mars-bar").css("width", parseInt(Math.round(marsPercent)) * 5 + "px")
+    $("#jupiter-bar").css("width", parseInt(Math.round(jupiterPercent)) * 5 + "px")
+    $("#saturn-bar").css("width", parseInt(Math.round(saturnPercent)) * 5 + "px")
+    $("#uranus-bar").css("width", parseInt(Math.round(uranusPercent)) * 5 + "px")
+    $("#neptune-bar").css("width", parseInt(Math.round(neptunePercent)) * 5 + "px")
 })
 
 
@@ -351,8 +364,9 @@ $(".clickPlanet").click(function () {
         .then(function (newsResponse) {
             console.log(newsResponse);
         });
+    var queryURL = buildQueryURL();
 
-
+   
 
 });
 
@@ -381,5 +395,5 @@ $("#backBtn").click(function () {
     $("#imageDiv").empty();
     $("#videoDiv").empty();
 
-    //******************/clear out news articles once connected *************************
+    // ******************/clear out news articles once connected *************************
 });
