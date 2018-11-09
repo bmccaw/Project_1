@@ -151,10 +151,6 @@ p {
 .jumbotron{
     background: rgba(122, 122, 122, 0.5);
 }
-#num {
-    width: 90%;
-    margin:auto;
-}
 /* Planet animation code goes here */
 .wrapper {
     position:relative;
