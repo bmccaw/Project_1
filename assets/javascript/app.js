@@ -174,7 +174,7 @@ var planetData = {
         radius: "1,516 miles",
         moonNum: "0 moons",
         life: "Mercury's environment is not conducive to life as we know it. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.",
-        overview: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
+        overview: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system. That title belongs to nearby Venus, thanks to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
         naming: "Mercury is appropriately named for the swiftest of the ancient Roman gods.",
         videoLinks: ["https://images-assets.nasa.gov/video/33_SleepyHollows/33_SleepyHollows~orig.mp4", "https://images-assets.nasa.gov/video/215_TransitOfMercury/215_TransitOfMercury~orig.mp4", "https://images-assets.nasa.gov/video/92_PinkPlanet/92_PinkPlanet~orig.mp4"],
         videoTitles: ["The Sleepy Hollows of Mercury", "The 2016 Transit of Mercury", "Pink Planet at Sunset"]
@@ -197,7 +197,7 @@ var planetData = {
         radius: "3,959 miles",
         moonNum: "1 moon",
         life: "Earth has a very hospitable temperature and mix of chemicals that have made life possible here. Most notably, Earth is unique in that most of our planet is covered in water, since the temperature allows liquid water to exist for extended periods of time. Earth's vast oceans provided a convenient place for life to begin about 3.8 billion years ago. Some of the features of our planet that make it great for sustaining life are changing due to the ongoing effects of climate change.",
-        overview: "Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.",
+        overview: "Our home planet is the third planet from the Sun, and the only place we know of so far that's inhabited by living things. While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.",
         naming: "The name Earth is at least 1,000 years old. All of the planets, except for Earth, were named after Greek and Roman gods and goddesses. However, the name Earth is a Germanic word, which simply means 'the ground'.",
         videoLinks: ["https://images-assets.nasa.gov/video/Earth Views/Earth Views~orig.mp4", "https://images-assets.nasa.gov/video/jsc2017m001088_Top-17-Earth-Images-of-2017-MP4/jsc2017m001088_Top-17-Earth-Images-of-2017-MP4~orig.mp4", "https://images-assets.nasa.gov/video/JPL-20170630-ASTRDSf-0001-How Do We Spot Near Earth Asteroids/JPL-20170630-ASTRDSf-0001-How Do We Spot Near Earth Asteroids~orig.mp4"],
         videoTitles: ["Earth Views", "Top 17 Earth Images of 2017", "How Do We Spot Near Earth Asteroids"]
@@ -218,9 +218,9 @@ var planetData = {
         yearLength: "4,333 Earth days",
         radius: "43,440.7 miles",
         moonNum: "79 confirmed moons",
-        life: "Jupiter’s environment is probably not conducive to life as we know it. The temperatures, pressures and materials that characterize this planet are most likely too extreme and volatile for organisms to adapt to.",
-        overview: "Jupiter is the fifth planet from our Sun and is, by far, the largest planet in the solar system – more than twice as massive as all the other planets combined. Jupiter's stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter’s iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
-        naming: "Jupiter is named for the king of the ancient Roman gods.​",
+        life: "Jupiter's environment is probably not conducive to life as we know it. The temperatures, pressures and materials that characterize this planet are most likely too extreme and volatile for organisms to adapt to.",
+        overview: "Jupiter is the fifth planet from our Sun and is, by far, the largest planet in the solar system, more than twice as massive as all the other planets combined. Jupiter's stripes and swirls are actually cold, windy clouds of ammonia and water, floating in an atmosphere of hydrogen and helium. Jupiter's iconic Great Red Spot is a giant storm bigger than Earth that has raged for hundreds of years.",
+        naming: "Jupiter is named for the king of the ancient Roman gods.",
         videoLinks: ["https://images-assets.nasa.gov/video/JPL-20180411-JUNOf-0002-Flyover of Jupiters North Pole in Infrared/JPL-20180411-JUNOf-0002-Flyover of Jupiters North Pole in Infrared~orig.mp4", "https://images-assets.nasa.gov/video/241_AllNightWithJupiter/241_AllNightWithJupiter~orig.mp4", "https://images-assets.nasa.gov/video/210_CloseEncountersJupiter/210_CloseEncountersJupiter~orig.mp4"],
         videoTitles: ["Flyover of Jupiters North Pole in Infrared", "All Night With Jupiter", "Close Encounters Jupiter"]
     },
@@ -262,7 +262,7 @@ var planetData = {
         radius: "432,168.6 miles",
         moonNum: "The Sun and other stars don't have moons. Instead, they have planets and their moons, along with asteroids, comets, and other objects.",
         life: "The Sun itself is not a good place for living things, with its hot, energetic mix of gases and plasma. But the Sun has made life on Earth possible, providing warmth as well as energy that organisms like plants use to form the basis of many food chains.",
-        overview: "The Sun is the center of our solar system and makes up 99.8 percent of the mass of the entire solar system. It is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything – from the biggest planets to the smallest particles of debris – in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.",
+        overview: "The Sun is the center of our solar system and makes up 99.8 percent of the mass of the entire solar system. It is a yellow dwarf star, a hot ball of glowing gases at the heart of our solar system. Its gravity holds the solar system together, keeping everything, from the biggest planets to the smallest particles of debris, in its orbit. The connection and interactions between the Sun and Earth drive the seasons, ocean currents, weather, climate, radiation belts and auroras. Though it is special to us, there are billions of stars like our Sun scattered across the Milky Way galaxy.",
         naming: "The Sun has many names in many cultures. The Latin word for Sun is 'sol,' which is the main adjective for all things Sun-related: solar.",
         videoLinks: ["https://images-assets.nasa.gov/video/279_FollowTheSun/279_FollowTheSun~orig.mp4", "https://images-assets.nasa.gov/video/21_SunGrazingComet/21_SunGrazingComet~orig.mp4", "https://images-assets.nasa.gov/video/114_SunMagFieldFlip/114_SunMagFieldFlip~orig.mp4"],
         videoTitles: ["Follow The Sun", "Sun Grazing Comet", "Sun Mag Field Flip"]
@@ -326,7 +326,7 @@ $(".clickPlanet").click(function () {
                 var imageSet = $("<img>")
                     .attr("src", nasaResults[i].links[0].href)
                     .addClass("resultImages");
-
+   
                 $("#imageDiv").append(imageSet);
 
                 //this gets titles if we want to display them on hover ********************
