@@ -3,7 +3,7 @@ body {
   /* color:(64, 247, 47)   */
 }
 a:link {
-    color: rgb(255, 255, 255);
+    color:#a8ddb0;
 }
 a:visited {
     color: rgb(185, 185, 185);
@@ -660,6 +660,22 @@ p {
 
   #videoDiv p{
     padding-left:50px;
-    padding-bottom:10px;
+    padding-bottom:20px;
     text-shadow: none;
+    color:#a8ddb0;
   }
+#enter, #backBtn, #videoBtn, #imagesBtn, #moreImagesBtn{
+    color:#a8ddb0;
+}
+#enter{
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 10px;
+}
+
+#pollDiv label{
+    color:#a8ddb0;
+}
+
+#newsDiv .card-header{
+    padding:20px;
+}
