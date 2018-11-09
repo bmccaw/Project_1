@@ -342,7 +342,7 @@ var planetData = {
 
 //when we click on a plaent button
 $(".clickPlanet").click(function () {
-$(".clickPlanet").addClass("animated bounceOut")
+// $(".clickPlanet").addClass("animated bounceOut")
     //change what is displayed on screen
     $("#graphicDiv").hide();
 
