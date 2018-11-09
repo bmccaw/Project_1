@@ -65,7 +65,7 @@
             <div class="card" id="graphicDiv" style="height: 40rem;">
 
                 <div class="wrapper">
-                    <div id="sun">
+                    <div id="sun" class="clickPlanet">
                         <div class="star"></div>
                     </div>
                     <div id="mercury" class="clickPlanet">
@@ -128,10 +128,11 @@
 
             <div class="row">
                 <div class="card-body resultsSection">
-                    <p>Length of day:
+
+                    <p class="timeLengths">Length of day:
                         <span id="dayLengthText"></span>
                     </p>
-                    <p>Length of year:
+                    <p class="timeLengths">Length of year:
                         <span id="yearLengthText"></span>
                     </p>
                     <p>Radius:
@@ -140,35 +141,46 @@
                     <p>Number of Moons:
                         <span id="moonNumText"></span>
                     </p>
+                    <p>Naming:
+                            <span id="namingText"></span>
+                    </p>
                     <p>Overview:
                         <span id="overviewText"></span>
                     </p>
                     <p>Potential for Life:
                         <span id="lifeText"></span>
                     </p>
-                    <p>Naming:
-                        <span id="namingText"></span>
-                    </p>
-                    <button class="btn" id="backBtn">Choose Another Planet</button>
+                    <button class="btn btn-dark" id="backBtn">Choose Another Planet</button>
+                
+                    <div id="backgroundDiv"></div>
                 </div>
 
-                <div class="card-body resultsSection">
-                    <span id="chosenDisplay"></span>
-                </div>
+
+                    
+            
+
 
             </div>
 
             <hr>
 
             <div class="card-body">
-                <button class="btn" id="imageBtn">Images</button>
-                <button class="btn" id="videoBtn">Videos</button>
+                <button class="btn btn-dark" id="imageBtn">Images</button>
+                <button class="btn btn-dark" id="videoBtn">Videos</button>
 
-                <div id="imageDiv"></div>
-                <div id="videoDiv"></div>
+                <div>
+                    <div id="imageDiv">
+                        <br>
+                    </div>
+                    <button class="btn btn-dark" id="moreImagesBtn">Load More Images</button>
+                </div>
+                <div id="videoDiv">
+                    <br>
+                </div>
 
             </div>
         </div>
+    </div>
 
         <div class="card" id="pollDiv">
 
@@ -212,6 +224,7 @@
                 <br>
                 <button class="btn btn-dark" style="color: lightcyan; width: 90px" id="enter">Submit</button>
             </div>
+
             <div class=" whole-poll" id="poll-results" style="color: rgb(64, 247, 47)">
                
                 
@@ -273,22 +286,10 @@
                 <div id="saturn-percent"></div>
                 <div id="uranus-percent"></div>
                 <div id="neptune-percent"></div>
+
                 <ul class="social"> -->
 
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -331,7 +332,7 @@
                             <span class="icon-big  icon fab fa-linkedin"></span>
                         </a>
                     </li>
-                    <div class="col-md-3" </div>
+                    <div class="col-md-3">
 
                         </ul>
                     </div>
@@ -344,6 +345,7 @@
             <script src="jquery.js"></script>
             <script src="jssocials.min.js"></script>
             <script src="assets/javascript/app.js"></script>
+
 
 
 </body>

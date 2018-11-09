@@ -36,7 +36,14 @@ border-color: lightslategray;}
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
     margin-right:5px;
-    margin-left:20px;
+    margin-left:50px;
+}
+#resultsDiv p{
+    font-size: 20px;
+}
+#resultsDiv span{
+    font-size: 15px;
+    color:#a8ddb0;
 }
 #newsDiv {
     background: rgba(122, 122, 122, 0.5);
@@ -592,11 +599,43 @@ p {
 /*Planet Animation code ends here*/
 
 /*reults div css*/
-.resultImages, .resultVideos{
-    width:200px;
-    padding:5px;
+.resultImages{
+    max-width:250px;
+    padding:10px;
+    max-height: 250px;
+}
+.resultVideos{
+    max-width:500px;
+    max-height: 300px;
+    padding:10px;
+    padding-left: 50px;
 }
 .resultsSection{
-background-size: cover;
-
+    position: relative;
 }
+/*empty div just for planet backgrounds*/
+#backgroundDiv {
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  #backBtn{
+    position: absolute;
+    top: 20px;
+    right:20px;
+  }
+
+  #videoDiv p{
+    padding-left:50px;
+    padding-bottom:10px;
+    text-shadow: none;
+  }
