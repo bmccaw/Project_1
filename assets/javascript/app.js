@@ -2,7 +2,7 @@
 //OnLoad Modal
 $(window).ready(function () {
     $('#onLoad').modal('show');
-   // $("#scifi-music").play()
+    // $("#scifi-music").play()
 
     //hide content
     $("#resultsDiv").hide();
@@ -174,7 +174,7 @@ var planetData = {
         radius: "1,516 miles",
         moonNum: "0 moons",
         life: "Mercury's environment is not conducive to life as we know it. The temperatures and solar radiation that characterize this planet are most likely too extreme for organisms to adapt to.",
-        overview: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter.",
+        overview: "The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon. From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as 11 times brighter. Despite its proximity to the Sun, Mercury is not the hottest planet in our solar system – that title belongs to nearby Venus, thanks to its dense atmosphere. But Mercury is the fastest planet, zipping around the Sun every 88 Earth days.",
         naming: "Mercury is appropriately named for the swiftest of the ancient Roman gods.",
         videoLinks: ["https://images-assets.nasa.gov/video/33_SleepyHollows/33_SleepyHollows~orig.mp4", "https://images-assets.nasa.gov/video/215_TransitOfMercury/215_TransitOfMercury~orig.mp4", "https://images-assets.nasa.gov/video/92_PinkPlanet/92_PinkPlanet~orig.mp4"],
         videoTitles: ["The Sleepy Hollows of Mercury", "The 2016 Transit of Mercury", "Pink Planet at Sunset"]
@@ -387,7 +387,7 @@ $(".clickPlanet").click(function () {
 
     var queryURL = buildQueryURL();
 
-   
+
 
 
 });
