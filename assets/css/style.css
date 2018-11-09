@@ -23,6 +23,9 @@ a:active {
 #poll-table{
     width:30px
 }
+#onLoad {
+    top: 200px;
+}
 #randomNum{text-align: center;
 border:1px;
 border-style: inset}
@@ -623,7 +626,16 @@ p {
     }
 }
 /*Planet Animation code ends here*/
-
+/*On hover text styling*/
+#planetNames {
+    position: absolute;
+    width: 960px;
+    left: 250px;
+    top: 500px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Orbitron', 'san-serif';
+}
 /*reults div css*/
 .resultImages{
     max-width:250px;

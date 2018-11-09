@@ -5,6 +5,9 @@ $(window).ready(function () {
     // $("#scifi-music").play()
 
     //hide content
+    $('.jumbotron').hide();
+    $('#graphicDiv').hide();
+    $('.soc').hide();
     $("#resultsDiv").hide();
     $("#pollDiv").hide();
     $("#newsDiv").hide();
@@ -25,13 +28,72 @@ $("#submit").on("click", function () {
         // $(".modal").empty()
         $(".modal").modal('toggle')
         $(".title").addClass("animated lightSpeedIn")
+        $('.jumbotron').fadeIn();
+        $('#graphicDiv').fadeIn();
+        $('.soc').fadeIn();
     }
     else {
         $("#modal-text").text("Are you a human Imposter! Try again!")
     }
 
 })
-
+//On-hover show planet names below
+$('#mercury').hover(
+    function(){
+           $('#merc-text').css('display', 'block')
+     },
+     function() { 
+        $('#merc-text').css('display', 'none')
+ });
+ $('#venus').hover(
+    function(){
+           $('#ven-text').css('display', 'block')
+     },
+     function() { 
+        $('#ven-text').css('display', 'none')
+ });
+ $('#earth').hover(
+    function(){
+           $('#earth-text').css('display', 'block')
+     },
+     function() { 
+        $('#earth-text').css('display', 'none')
+ });
+ $('#mars').hover(
+    function(){
+           $('#mars-text').css('display', 'block')
+     },
+     function() { 
+        $('#mars-text').css('display', 'none')
+ });
+ $('#jupiter').hover(
+    function(){
+           $('#jup-text').css('display', 'block')
+     },
+     function() { 
+        $('#jup-text').css('display', 'none')
+ });
+ $('#saturn').hover(
+    function(){
+           $('#sat-text').css('display', 'block')
+     },
+     function() { 
+        $('#sat-text').css('display', 'none')
+ });
+ $('#uranus').hover(
+    function(){
+           $('#ura-text').css('display', 'block')
+     },
+     function() { 
+        $('#ura-text').css('display', 'none')
+ });
+ $('#neptune').hover(
+    function(){
+           $('#nep-text').css('display', 'block')
+     },
+     function() { 
+        $('#nep-text').css('display', 'none')
+ });
 
 $("#poll-results").hide()
 let mercuryTotal = 0;
@@ -327,7 +389,7 @@ $(".clickPlanet").addClass("animated bounceOut")
         method: "GET"
     })
         .then(function (nasaResponse) {
-
+            console.log(nasaResponse);
             var nasaResults = nasaResponse.collection.items;
 
             //load 10 images to begin
