@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 
+<head>
 <title>Planet Exploration</title>
 <!--links for media sharing-->
 
@@ -21,11 +22,13 @@
 <!--link bootstrap js for modal-->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
-
-
-<head>
-
+<!-- nanogallery2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.10.3/css/themes/light/nanogallery_light.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/nanogallery/5.10.3/jquery.nanogallery.min.js"></script>
+<!-- Anime.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<!--typed.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js"></script>
 </head>
 
 <body>
@@ -56,6 +59,7 @@
             </div>
         </div>
     </div>
+    
     <audio id="scifi-music" src="assets/sounds/Lost-Meadow.mp3" preload="auto"></audio>
     <h1 class="jumbotron">Planet Exploration</h1>
 
@@ -65,6 +69,7 @@
             <div class="card" id="graphicDiv" style="height: 40rem;">
 
                 <div class="wrapper">
+                    
                     <div id="sun" class="clickPlanet">
                         <div class="star"></div>
                     </div>
@@ -72,55 +77,65 @@
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="merc-text">Mercury</span>
+                        
                     </div>
                     <div id="venus" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="ven-text">Venus</span>
+                        
                     </div>
                     <div id="earth" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="earth-text">Earth</span>
+                        
                     </div>
                     <div id="mars" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="mars-text">Mars</span>
+                        
                     </div>
                     <div id="jupiter" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="jup-text">Jupiter</span>
+                        
                     </div>
                     <div id="saturn" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="sat-text">Saturn</span>
+                        
                     </div>
                     <div id="uranus" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="ura-text">Uranus</span>
+                        
                     </div>
                     <div id="neptune" class="clickPlanet">
                         <div class="planet">
                             <div class="shadow"></div>
                         </div>
-                        <span id="nep-text">Neptune</span>
+                        
                     </div>
+                </div>
+                <div id="planetNames">
+                        <span id="merc-text">Mercury</span>
+                        <span id="ven-text">Venus</span>
+                        <span id="earth-text">Earth</span>
+                        <span id="mars-text">Mars</span>
+                        <span id="jup-text">Jupiter</span>
+                        <span id="sat-text">Saturn</span>
+                        <span id="ura-text">Uranus</span>
+                        <span id="nep-text">Neptune</span>
+
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="row">
         <div class="card col-md-8" id="resultsDiv">
@@ -327,7 +342,7 @@
                     </li>
                 </div>
                 <div class="col-md-2">
-                    <li>
+                    <li class="soc">
                         <a href="http://www.facebook.com/sharer/sharer.php?u=https://bmccaw.github.io/Project_1/" title="">
                             <span class=" icon-big icon fab fa-facebook"></span>
                         </a>
@@ -354,8 +369,8 @@
 
 
             <!-- link js page -->
-            <script src="jquery.js"></script>
-            <script src="jssocials.min.js"></script>
+            <!-- <script src="jquery.js"></script>
+            <script src="jssocials.min.js"></script> -->
             <script src="assets/javascript/app.js"></script>
 
 
