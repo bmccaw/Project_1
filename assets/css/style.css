@@ -1,12 +1,31 @@
 body {
     background-image: url("stary.jpg");
-    
+  /* color:(64, 247, 47)   */
 }
 #randomNum{color:rgb(64, 247, 47);}
 #graphicDiv {
     background-image: url("stary.jpg");
     margin-bottom: 20px;
 }
+#poll-table{
+    width:30px
+}
+#randomNum{text-align: center;
+border:1px;
+border-style: inset}
+#modal-command{color:rgb(64, 247, 47)}
+.card-head{border:2px;
+border-style: solid;
+border-color: lightslategray;
+background-color:rgb(71, 71, 240)}
+.bar{background-color:lime; border:2px;
+border-style:solid; border-color:lime;
+height:4px}
+.percent-holder{background-color:rgb(77, 128, 128); border-bottom:2px;
+border-style: inset; padding:1px; margin-left:0px}
+.planet-label{background-color:rgb(71, 71, 240);border:2px;
+border-style: outset;
+border-color: lightslategray;}
 .social-media{float:left}
 #pollDiv {
     background: rgba(122, 122, 122, 0.5);
@@ -17,7 +36,14 @@ body {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
     margin-right:5px;
-    margin-left:20px;
+    margin-left:50px;
+}
+#resultsDiv p{
+    font-size: 20px;
+}
+#resultsDiv span{
+    font-size: 15px;
+    color:#a8ddb0;
 }
 #newsDiv {
     background: rgba(122, 122, 122, 0.5);
@@ -365,7 +391,6 @@ p {
     font-size:25px
 }
 .icon-big:hover{font-size:50px}
-
 #nep-text {
     display:none;
     color: white;
@@ -376,6 +401,7 @@ p {
 #neptune .shadow {
     animation: shadow 85s infinite;
 }
+#randomNum{color:(64, 247, 47)}
 
 @keyframes sunrotate {
     0%{
@@ -573,11 +599,43 @@ p {
 /*Planet Animation code ends here*/
 
 /*reults div css*/
-.resultImages, .resultVideos{
-    width:200px;
-    padding:5px;
+.resultImages{
+    max-width:250px;
+    padding:10px;
+    max-height: 250px;
+}
+.resultVideos{
+    max-width:500px;
+    max-height: 300px;
+    padding:10px;
+    padding-left: 50px;
 }
 .resultsSection{
-background-size: cover;
-
+    position: relative;
 }
+/*empty div just for planet backgrounds*/
+#backgroundDiv {
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;  
+    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+
+  #backBtn{
+    position: absolute;
+    top: 20px;
+    right:20px;
+  }
+
+  #videoDiv p{
+    padding-left:50px;
+    padding-bottom:10px;
+    text-shadow: none;
+  }
