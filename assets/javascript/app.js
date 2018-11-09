@@ -156,9 +156,18 @@ $(document).on("click", "#enter", function (event) {
     $("#uranus-bar").css("width", parseInt(Math.round(uranusPercent)) * 5 + "px")
     $("#neptune-bar").css("width", parseInt(Math.round(neptunePercent)) * 5 + "px")
 })
-var planetInformation= []
+var planetInformation= ["86% of solar system mass comes from the sun and only 0.14% comes from remaining planets.",
+    "The planet Jupiter is considered as the solar system’s garbage disposal, because of its strong magnetic field that attracts space debris.",
+    "All the heavier elements in our body such as iron, carbon, calcium etc were made in supernova explosion.",
+    "Every year our moon is moving away from the earth with a distance of 4cm (1.6 inches).",
+    "Saturn is considered as the second largest planet of our solar system, but it’s the lightest planet in our solar system.",
+    "Mercury, Venus, Earth and Mars are called terrestrial planets and are mostly composed of rock and metal.",
+    "The Astronauts can grow two inches taller due to lack of gravity in space.",
+    "The edge of our solar system is more than 1,000 times father than Pluto.",
+    "We cannot burp in space."]
 var i = Math.floor(Math.random() * planetInformation.length)
-$("#planet-info").html(planetInformation[i])
+console.log(i)
+$("#planet-fact").html(planetInformation[i])
 
 //pollDiv
 
@@ -385,7 +394,7 @@ $(".clickPlanet").addClass("animated bounceOut")
             console.log(newsResponse);
         });
 
-    var queryURL = buildQueryURL();
+  //  var queryURL = buildQueryURL();
 
 
 
