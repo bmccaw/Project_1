@@ -28,7 +28,7 @@
 
 <body>
 
-    <div class="modal" id="onLoad" tabindex="-1" role="dialog">
+    <div class="modal fade" id="onLoad" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -39,14 +39,15 @@
                 </div>
                 <div class="modal-body">
                     <p id="modal-text">Enter the code below and click submit to confirm your humanity.</p>
-                </div>
-                <div style="color:(64, 247, 47); border:1px; border-style:inset; text-align:center" id="randomNum"></div>
+                
+                <div style="color:(64, 247, 47); border:1px; border-style:inset; text-align:center;" id="randomNum"></div>
                 <form>
                     <div class="form-group">
-                        <label id="modal-command">Type the code here</label>
+                        <label id="modal-command" style="margin:auto">Type the code here</label>
                         <input type="text" class="form-control" id="num" placeholder="">
                     </div>
                 </form>
+            </div>
                 <div class="text-center mb-2">
                     <button type="button" class="btn btn-primary center-block" id="submit">Submit</button>
                 </div>
