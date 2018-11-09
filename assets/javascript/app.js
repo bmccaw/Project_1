@@ -357,9 +357,6 @@ var planetData = {
 //when we click on a planet button
 $(".clickPlanet").click(function () {
 
-    //play animation
-    $(".clickPlanet").addClass("animated bounceOut")
-
     //change what is displayed on screen
     $("#graphicDiv").hide();
 
