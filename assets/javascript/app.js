@@ -1,9 +1,11 @@
-
 //OnLoad Modal
 $(window).ready(function () {
+
     $('#onLoad').modal('show');
-    // $("#scifi-music").play()
-$("#num").val("")
+
+    //clear num value
+    $("#num").val("")
+
     //hide content
     $('.jumbotron').hide();
     $('#graphicDiv').hide();
@@ -13,17 +15,23 @@ $("#num").val("")
     $("#newsDiv").hide();
 });
 
+//establish variables for modal
 var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
 var charactersLength = 7;
 var randomGenerator = '';
+
+//create random code 7 characters long and set as text in modal
 for (var i = 0; i < charactersLength; i++) {
     var rnum = Math.floor(Math.random() * characters.length);
     randomGenerator += characters.substring(rnum, rnum + 1);
 }
+
 $("#randomNum").text(randomGenerator)
 
+//when we click submit in the modal
 $("#submit").on("click", function () {
 
+    //if code is entered correctly then move on
     if (randomGenerator == $("#num").val()) {
         // $(".modal").empty()
         $(".modal").modal('toggle')
@@ -32,70 +40,74 @@ $("#submit").on("click", function () {
         $('#graphicDiv').fadeIn();
         $('.soc').fadeIn();
     }
+    //if code is entered incorrectly then try again
     else {
         $("#modal-text").text("Are you a human Imposter! Try again!")
     }
-
 })
+
 //On-hover show planet names below
 $('#mercury').hover(
-    function(){
-           $('#merc-text').css('display', 'block')
-     },
-     function() { 
+    function () {
+        $('#merc-text').css('display', 'block')
+    },
+    function () {
         $('#merc-text').css('display', 'none')
- });
- $('#venus').hover(
-    function(){
-           $('#ven-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#venus').hover(
+    function () {
+        $('#ven-text').css('display', 'block')
+    },
+    function () {
         $('#ven-text').css('display', 'none')
- });
- $('#earth').hover(
-    function(){
-           $('#earth-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#earth').hover(
+    function () {
+        $('#earth-text').css('display', 'block')
+    },
+    function () {
         $('#earth-text').css('display', 'none')
- });
- $('#mars').hover(
-    function(){
-           $('#mars-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#mars').hover(
+    function () {
+        $('#mars-text').css('display', 'block')
+    },
+    function () {
         $('#mars-text').css('display', 'none')
- });
- $('#jupiter').hover(
-    function(){
-           $('#jup-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#jupiter').hover(
+    function () {
+        $('#jup-text').css('display', 'block')
+    },
+    function () {
         $('#jup-text').css('display', 'none')
- });
- $('#saturn').hover(
-    function(){
-           $('#sat-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#saturn').hover(
+    function () {
+        $('#sat-text').css('display', 'block')
+    },
+    function () {
         $('#sat-text').css('display', 'none')
- });
- $('#uranus').hover(
-    function(){
-           $('#ura-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#uranus').hover(
+    function () {
+        $('#ura-text').css('display', 'block')
+    },
+    function () {
         $('#ura-text').css('display', 'none')
- });
- $('#neptune').hover(
-    function(){
-           $('#nep-text').css('display', 'block')
-     },
-     function() { 
+    });
+$('#neptune').hover(
+    function () {
+        $('#nep-text').css('display', 'block')
+    },
+    function () {
         $('#nep-text').css('display', 'none')
- });
+    });
 
+// hide poll results to begin   
 $("#poll-results").hide()
+
+//establish poll variables and connet to firebase
 let mercuryTotal = 0;
 let venusTotal = 0;
 let earthTotal = 0;
@@ -113,7 +125,10 @@ var config = {
     storageBucket: "project1-cce4d.appspot.com",
     messagingSenderId: "712116811556"
 };
+
+//pull poll results from firebase as totals and percentages
 firebase.initializeApp(config);
+
 var database = firebase.database();
 
 if (mercuryTotal != null) {
@@ -129,7 +144,6 @@ if (mercuryTotal != null) {
         total = snapshot.val().planetTotal
         mercuryPercent = parseInt(mercuryTotal) / parseInt(total) * 100
         venusPercent = parseInt(venusTotal) / parseInt(total) * 100
-        console.log(venusPercent)
         earthPercent = parseInt(earthTotal) / parseInt(total) * 100
         marsPercent = parseInt(marsTotal) / parseInt(total) * 100
         jupiterPercent = parseInt(jupiterTotal) / parseInt(total) * 100
@@ -140,52 +154,46 @@ if (mercuryTotal != null) {
 
 }
 
+//when we click enter in the poll
 $(document).on("click", "#enter", function (event) {
+
     event.preventDefault();
+
+    //hide poll question
     $(".custom-radio").hide()
+
+    //update totals to reflect user choice
     if ($('#defaultGroupExample1').is(':checked')) {
         mercuryTotal++
-        console.log(mercuryTotal)
-
     }
     if ($('#defaultGroupExample2').is(':checked')) {
         venusTotal++
-        console.log(venusTotal)
     }
     if ($('#defaultGroupExample3').is(':checked')) {
         earthTotal++
-        console.log(earthTotal)
     }
     if ($('#defaultGroupExample4').is(':checked')) {
         marsTotal++
-        console.log(marsTotal)
     }
     if ($('#defaultGroupExample5').is(':checked')) {
         jupiterTotal++
-        console.log(jupiterTotal)
     }
     if ($('#defaultGroupExample6').is(':checked')) {
         saturnTotal++
-        console.log(saturnTotal)
     }
     if ($('#defaultGroupExample7').is(':checked')) {
         uranusTotal++
-        console.log(uranusTotal)
     }
     if ($('#defaultGroupExample8').is(':checked')) {
         neptuneTotal++
-        console.log(neptuneTotal)
     }
+
     total++
+
+    //display poll esults
     $("#poll-results").show()
-    console.log("total" + total)
-    console.log(mercuryTotal)
 
-
-
-
-
-
+    //set new total base on user choice
     database.ref().set({
 
         mercury: mercuryTotal,
@@ -198,8 +206,8 @@ $(document).on("click", "#enter", function (event) {
         neptune: neptuneTotal,
         planetTotal: total,
     })
-    var t = parseInt(Math.round(mercuryPercent)) * 2
-    console.log(t)
+    
+    //display result percentages as text
     $("#mercury-percent").text(Math.round(mercuryPercent) + "%")
     $("#venus-percent").text(Math.round(venusPercent) + "%")
     $("#earth-percent").text(Math.round(earthPercent) + "%")
@@ -209,6 +217,7 @@ $(document).on("click", "#enter", function (event) {
     $("#uranus-percent").text(Math.round(uranusPercent) + "%")
     $("#neptune-percent").text(Math.round(neptunePercent) + "%")
 
+    //display result percentages as bars
     $("#mercury-bar").css("width", parseInt(Math.round(mercuryPercent)) * 5 + "px")
     $("#venus-bar").css("width", parseInt(Math.round(venusPercent)) * 5 + "px")
     $("#earth-bar").css("width", parseInt(Math.round(earthPercent)) * 5 + "px")
@@ -218,8 +227,10 @@ $(document).on("click", "#enter", function (event) {
     $("#uranus-bar").css("width", parseInt(Math.round(uranusPercent)) * 5 + "px")
     $("#neptune-bar").css("width", parseInt(Math.round(neptunePercent)) * 5 + "px")
 })
-var planetInformation= ["86% of solar system mass comes from the sun and only 0.14% comes from remaining planets.",
-    "The planet Jupiter is considered as the solar system’s garbage disposal, because of its strong magnetic field that attracts space debris.",
+
+//array of fun facts
+var planetInformation = ["86% of solar system mass comes from the sun and only 0.14% comes from remaining planets.",
+    "The planet Jupiter is considered as the solar system's garbage disposal, because of its strong magnetic field that attracts space debris.",
     "All the heavier elements in our body such as iron, carbon, calcium etc were made in supernova explosion.",
     "Every year our moon is moving away from the earth with a distance of 4cm (1.6 inches).",
     "Saturn is considered as the second largest planet of our solar system, but it’s the lightest planet in our solar system.",
@@ -227,16 +238,19 @@ var planetInformation= ["86% of solar system mass comes from the sun and only 0.
     "The Astronauts can grow two inches taller due to lack of gravity in space.",
     "The edge of our solar system is more than 1,000 times father than Pluto.",
     "We cannot burp in space."]
+  
+//chose a random fun fact from array    
 var i = Math.floor(Math.random() * planetInformation.length)
-console.log(i)
-$("#planet-fact").html(planetInformation[i])
 
-//pollDiv
+//display chosen fact
+$("#planet-fact").html(planetInformation[i])
 
 //resultsDiv
 
+//set more images button click to not clicked
 var moreBntClick = false;
 
+//object of planet facts and videos
 var planetData = {
     mercury: {
         photo: "assets/images/mercury.png",
@@ -340,9 +354,12 @@ var planetData = {
     }
 };
 
-//when we click on a plaent button
+//when we click on a planet button
 $(".clickPlanet").click(function () {
-$(".clickPlanet").addClass("animated bounceOut")
+
+    //play animation
+    $(".clickPlanet").addClass("animated bounceOut")
+
     //change what is displayed on screen
     $("#graphicDiv").hide();
 
@@ -354,7 +371,7 @@ $(".clickPlanet").addClass("animated bounceOut")
     $("#imageDiv").show()
     $("#videoBtn").show()
 
-    //reset more images button
+    //reset more images button and display
     moreBntClick = false;
     $("#moreImagesBtn").show();
 
@@ -371,9 +388,11 @@ $(".clickPlanet").addClass("animated bounceOut")
     $("#lifeText").text(planetData[chosenPlanet].life);
     $("#namingText").text(planetData[chosenPlanet].naming);
 
+    //if the sun is clicked hide the day and year lengths
     if (chosenPlanet === "sun") {
         $(".timeLengths").hide();
     }
+    //otherwise show them
     else {
         $(".timeLengths").show();
     }
@@ -389,7 +408,8 @@ $(".clickPlanet").addClass("animated bounceOut")
         method: "GET"
     })
         .then(function (nasaResponse) {
-            console.log(nasaResponse);
+            
+            //get into result object to find image items
             var nasaResults = nasaResponse.collection.items;
 
             //load 10 images to begin
@@ -397,14 +417,12 @@ $(".clickPlanet").addClass("animated bounceOut")
                 var imageSet = $("<img>")
                     .attr("src", nasaResults[i].links[0].href)
                     .addClass("resultImages");
-   
-                $("#imageDiv").append(imageSet);
 
-                //this gets titles if we want to display them on hover ********************
-                console.log(nasaResults[i].data[0].title);
+                //add images to display    
+                $("#imageDiv").append(imageSet);
             }
 
-            //load 50 images on click
+            //load 50 images on more images click
             $("#moreImagesBtn").one("click", function () {
 
                 for (i = 10; i < 50; i++) {
@@ -412,18 +430,19 @@ $(".clickPlanet").addClass("animated bounceOut")
                         .attr("src", nasaResults[i].links[0].href)
                         .addClass("resultImages");
 
+                    //addd images to display    
                     $("#imageDiv").append(imageSet);
 
+                    //hide more images button and set and clicked
                     $("#moreImagesBtn").hide();
-
                     moreBntClick = true;
                 }
-
             });
 
-            //get videos for chosen planet and connect to dom
+            //get 3 videos for chosen planet
             for (i = 0; i < 3; i++) {
 
+                //get link and set as video with controls
                 var video = $("<video>")
                     .attr("src", planetData[chosenPlanet].videoLinks[i])
                     .addClass("resultVideos")
@@ -431,17 +450,19 @@ $(".clickPlanet").addClass("animated bounceOut")
                     .attr("controls", "play")
                     .attr("controls", "pause");
 
+                //get video titles    
                 var title = $("<p>")
                     .text(planetData[chosenPlanet].videoTitles[i])
 
+                //display videos and titles    
                 $("#videoDiv").append(video)
                     .append(title);
-
             };
         });
 
     //news div
 
+    //connect to NYT API to search for chosen planet
     var newsQueryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     newsQueryURL += '?' + $.param({
         'api-key': "bf393ccfe12c46df99b019707f2a1d65",
@@ -452,6 +473,7 @@ $(".clickPlanet").addClass("animated bounceOut")
         url: newsQueryURL,
         method: "GET"
     })
+        //pull article links and descriptions and ddisplay them
         .then(function (newsResponse) {
             console.log(newsResponse);
             $("#news1").append("<a href='" + newsResponse.response.docs[2].web_url + "'>" + newsResponse.response.docs[2].snippet + "</a>");
@@ -467,8 +489,9 @@ $(".clickPlanet").addClass("animated bounceOut")
 
 });
 
-//when we click the images button
+//when we click the images button change what is displayed
 $("#imageBtn").click(function () {
+
     $("#imageDiv").show()
     $("#videoDiv").hide()
     $("#moreImagesBtn").show()
@@ -481,7 +504,7 @@ $("#imageBtn").click(function () {
     }
 });
 
-//when we click the videos button
+//when we click the videos button change what is displayed
 $("#videoBtn").click(function () {
     $("#imageDiv").hide()
     $("#videoDiv").show()
@@ -503,11 +526,10 @@ $("#backBtn").click(function () {
     //clear out specific planet results
     $("#imageDiv").empty();
     $("#videoDiv").empty();
+
     ///clear out news
     $("#news1").empty();
     $("#news2").empty();
     $("#news3").empty();
     $("#news4").empty();
-
-    // ******************/clear out news articles once connected *************************
 });
