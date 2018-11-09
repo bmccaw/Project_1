@@ -2,6 +2,18 @@ body {
     background-image: url("stary.jpg");
   /* color:(64, 247, 47)   */
 }
+a:link {
+    color: rgb(255, 255, 255);
+}
+a:visited {
+    color: rgb(185, 185, 185);
+}
+a:hover {
+    color: rgb(167, 166, 255)
+}
+a:active {
+    color: rgb(38, 0, 255)
+}
 #randomNum{color:rgb(64, 247, 47);}
 #graphicDiv {
     background-image: url("stary.jpg");
@@ -46,6 +58,18 @@ border-color: lightslategray;}
     color:#a8ddb0;
 }
 #newsDiv {
+    background: rgba(122, 122, 122, 0.5);
+}
+#news1 {
+    background: rgba(122, 122, 122, 0.5);
+}
+#news2 {
+    background: rgba(122, 122, 122, 0.5);
+}
+#news3 {
+    background: rgba(122, 122, 122, 0.5);
+}
+#news4 {
     background: rgba(122, 122, 122, 0.5);
 }
 h5 {
