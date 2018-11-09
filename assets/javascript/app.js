@@ -5,8 +5,9 @@ $(window).ready(function () {
     // $("#scifi-music").play()
 
     //hide content
-    // $('.jumbotron').hide();
-    // $('#graphicDiv').hide();
+    $('.jumbotron').hide();
+    $('#graphicDiv').hide();
+    $('.soc').hide();
     $("#resultsDiv").hide();
     $("#pollDiv").hide();
     $("#newsDiv").hide();
@@ -26,7 +27,9 @@ $("#submit").on("click", function () {
     if (randomGenerator == $("#num").val()) {
         // $(".modal").empty()
         $(".modal").modal('toggle')
-
+        $('.jumbotron').fadeIn();
+        $('#graphicDiv').fadeIn();
+        $('.soc').fadeIn();
     }
     else {
         $("#modal-text").text("Are you a human Imposter! Try again!")

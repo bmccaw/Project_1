@@ -10,6 +10,9 @@ body {
 #poll-table{
     width:30px
 }
+#onLoad {
+    top: 200px;
+}
 #randomNum{text-align: center;
 border:1px;
 border-style: inset}
