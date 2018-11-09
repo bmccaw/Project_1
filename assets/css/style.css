@@ -1,7 +1,7 @@
 body {
     background-image: url("stary.jpg");
-  /* color:(64, 247, 47)   */
 }
+
 a:link {
     color:#a8ddb0;
 }
@@ -14,7 +14,9 @@ a:hover {
 a:active {
     color: rgb(38, 0, 255)
 }
+
 #randomNum{color:rgb(64, 247, 47);}
+
 #graphicDiv {
     background-image: url("stary.jpg");
     margin-bottom: 20px;
@@ -23,32 +25,63 @@ a:active {
 #poll-table{
     width:30px
 }
+
 #onLoad {
     top: 200px;
 }
-#randomNum{text-align: center;
-border:1px;
-border-style: inset}
-#modal-command{color:rgb(64, 247, 47)}
-.card-head{border:2px;
-border-style: solid;
-border-color: lightslategray;
-background-color:rgb(71, 71, 240)}
-.bar{background-color:lime; border:2px;
-border-style:solid; border-color:lime;
-height:4px}
-.percent-holder{background-color:rgb(77, 128, 128); border-bottom:2px;
-border-style: inset; padding:1px; margin-left:0px}
-.planet-label{background-color:rgb(71, 71, 240);border:2px;
-border-style: outset;
-border-color: lightslategray;}
-.social-media{float:left}
+
+#randomNum{
+    text-align: center;
+    border:1px;
+    border-style: inset
+}
+
+#modal-command{
+    color:rgb(64, 247, 47)
+}
+
+.card-head{
+    border:2px;
+    border-style: solid;
+    border-color: lightslategray;
+    background-color:rgb(71, 71, 240)
+}
+
+.bar{
+    background-color:lime; border:2px;
+    border-style:solid; border-color:lime;
+    height:4px
+}
+
+.percent-holder{
+    background-color:rgb(77, 128, 128); 
+    border-bottom:2px;
+    border-style: inset; 
+    padding:1px; 
+    margin-left:0px
+}
+
+.planet-label{
+    background-color:rgb(71, 71, 240);
+    border:2px;
+    border-style: outset;
+    border-color: lightslategray;
+}
+
+.social-media{
+    float:left
+}
+
 #pollDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
     margin-right:5px;
 }
-#planet-info{color:lime}
+
+#planet-info{
+    color:lime
+}
+
 #resultsDiv {
     background: rgba(122, 122, 122, 0.5);
     margin-bottom: 20px;
@@ -62,6 +95,7 @@ border-color: lightslategray;}
     font-size: 15px;
     color:#a8ddb0;
 }
+
 #newsDiv {
     background: rgba(122, 122, 122, 0.5);
 }
@@ -77,6 +111,7 @@ border-color: lightslategray;}
 #news4 {
     background: rgba(122, 122, 122, 0.5);
 }
+
 h5 {
     font-family: 'Orbitron', sans-serif;
     color: rgb(64, 247, 47);
@@ -103,10 +138,12 @@ p {
     color: rgb(64, 247, 47);
     text-shadow: 0 0 10px rgb(5, 155, 0);    
 }
+
 .modal-content {
     background: rgba(1, 112, 6, 0.5);
     margin-bottom: 20px;
 }
+
 .btn-primary {
     font-family: 'Orbitron', sans-serif;
     background-color: rgb(64, 247, 47);
@@ -143,11 +180,13 @@ p {
     box-shadow: 0 0 10px rgb(255, 112, 112);
     border: 2px solid rgb(255, 145, 145);
 }
+
 .card-body {
     font-family: 'Orbitron', sans-serif;
     color: rgb(64, 247, 47);
     text-shadow: 0 0 10px rgb(5, 155, 0);
 }
+
 .jumbotron{
     background: rgba(122, 122, 122, 0.5);
 }
@@ -159,7 +198,6 @@ p {
     margin-top: 200px;
     perspective: 1000px;
     perspective-origin: 60% 50%;
-    /* transform: rotate(10deg);  */
     right: 320px;
     top: 100px;
 }
@@ -403,8 +441,6 @@ p {
     animation: orbitneptune 85s infinite linear;
     top: -15px;
     left: -200px;
-    /* border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%; */
 }
 #neptune .planet {
     width: 50px;
@@ -625,6 +661,7 @@ p {
     }
 }
 /*Planet Animation code ends here*/
+
 /*On hover text styling*/
 #planetNames {
     position: absolute;
@@ -663,23 +700,28 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; 
-  }
+}
 
-  #backBtn{
+/* position new planet button */
+#backBtn{
     position: absolute;
     top: 20px;
     right:20px;
-  }
+}
 
-  #videoDiv p{
+/* vieo titles */
+#videoDiv p{
     padding-left:50px;
     padding-bottom:20px;
     text-shadow: none;
     color:#a8ddb0;
-  }
-#enter, #backBtn, #videoBtn, #imagesBtn, #moreImagesBtn{
+}
+
+/* buttons */
+#enter, #backBtn, #videoBtn, #imageBtn, #moreImagesBtn{
     color:#a8ddb0;
 }
+
 #enter{
     font-family: 'Orbitron', sans-serif;
     margin-bottom: 10px;
@@ -691,4 +733,9 @@ p {
 
 #newsDiv .card-header{
     padding:20px;
+}
+
+#funFactDiv{
+    padding:20px;
+    color:rgb(64, 247, 47);
 }
