@@ -3,7 +3,7 @@
 $(window).ready(function () {
     $('#onLoad').modal('show');
     // $("#scifi-music").play()
-
+$("#num").val("")
     //hide content
     $('.jumbotron').hide();
     $('#graphicDiv').hide();
