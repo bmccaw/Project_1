@@ -2,7 +2,7 @@
 //OnLoad Modal
 $(window).ready(function () {
     $('#onLoad').modal('show');
-    // $("#scifi-music").play()
+    $("#scifi-music").play()
 
     //hide content
     // $('.jumbotron').hide();
@@ -334,34 +334,6 @@ $(".clickPlanet").click(function () {
                 //this gets titles if we want to display them on hover ********************
                 console.log(nasaResults[i].data[0].title);
             }
-            //image gallery code goes here --- currently not working and disables scroll by adding an overflow:hidden style to body (not sure why)
-            // $('#imageDiv').nanoGallery({
-            //     thumbnailWidth:200,thumbnailHeight:'auto', itemBaseURL: 'https://images-api.nasa.gov',
-            //     items: [
-            //         {
-            //         //img url
-            //         src: nasaResults[i].links[0].href,
-            //         //thumbnail url
-            //         srct: nasaResults[i].links[0].href,
-            //         //title
-            //         title: nasaResults[i].data[0].description,
-            //         //description
-            //         description: nasaResults[i].data[0].description,
-            //     },
-            //     {
-            //         //img url
-            //         src: nasaResults[i].links[0].href,
-            //         //thumbnail url
-            //         srct: nasaResults[i].links[0].href,
-            //         //title
-            //         title: nasaResults[i].data[0].description,
-            //         //description
-            //         description: nasaResults[i].data[0].description,
-            //     }
-            // ]
-            // }); console.log(nasaResults[i].data[0].description)
-        
-            //END IMAGE GALLERY CODE
 
             //load 50 images on click
             $("#moreImagesBtn").one("click", function () {
