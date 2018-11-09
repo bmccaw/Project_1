@@ -373,8 +373,8 @@ $(".clickPlanet").click(function () {
 
     var newsQueryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
     newsQueryURL += '?' + $.param({
-        "api-key": "bf393ccfe12c46df99b019707f2a1d65",
-        "q": chosenPlanet
+        'api-key': "bf393ccfe12c46df99b019707f2a1d65",
+        'q': (chosenPlanet + " nasa")
     });
 
     $.ajax({
@@ -383,11 +383,15 @@ $(".clickPlanet").click(function () {
     })
         .then(function (newsResponse) {
             console.log(newsResponse);
+            $("#news1").append("<a href='" + newsResponse.response.docs[2].web_url + "'>" + newsResponse.response.docs[2].snippet + "</a>");
+            $("#news2").append("<a href='" + newsResponse.response.docs[3].web_url + "'>" + newsResponse.response.docs[3].snippet + "</a>");
+            $("#news3").append("<a href='" + newsResponse.response.docs[4].web_url + "'>" + newsResponse.response.docs[4].snippet + "</a>");
+            $("#news4").append("<a href='" + newsResponse.response.docs[5].web_url + "'>" + newsResponse.response.docs[5].snippet + "</a>");
+            $("#news1").append(newsResponse.copyright);
+            $("#news2").append(newsResponse.copyright);
+            $("#news3").append(newsResponse.copyright);
+            $("#news4").append(newsResponse.copyright);
         });
-
-    var queryURL = buildQueryURL();
-
-
 
 
 });
@@ -428,6 +432,11 @@ $("#backBtn").click(function () {
     //clear out specific planet results
     $("#imageDiv").empty();
     $("#videoDiv").empty();
+    ///clear out news
+    $("#news1").empty();
+    $("#news2").empty();
+    $("#news3").empty();
+    $("#news4").empty();
 
     // ******************/clear out news articles once connected *************************
 });
