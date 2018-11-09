@@ -2,7 +2,7 @@
 //OnLoad Modal
 $(window).ready(function () {
     $('#onLoad').modal('show');
-    $("#scifi-music").play()
+    // $("#scifi-music").play()
 
     //hide content
     // $('.jumbotron').hide();
@@ -33,7 +33,63 @@ $("#submit").on("click", function () {
     }
 
 })
-
+//On-hover show planet names below
+$('#mercury').hover(
+    function(){
+           $('#merc-text').css('display', 'block')
+     },
+     function() { 
+        $('#merc-text').css('display', 'none')
+ });
+ $('#venus').hover(
+    function(){
+           $('#ven-text').css('display', 'block')
+     },
+     function() { 
+        $('#ven-text').css('display', 'none')
+ });
+ $('#earth').hover(
+    function(){
+           $('#earth-text').css('display', 'block')
+     },
+     function() { 
+        $('#earth-text').css('display', 'none')
+ });
+ $('#mars').hover(
+    function(){
+           $('#mars-text').css('display', 'block')
+     },
+     function() { 
+        $('#mars-text').css('display', 'none')
+ });
+ $('#jupiter').hover(
+    function(){
+           $('#jup-text').css('display', 'block')
+     },
+     function() { 
+        $('#jup-text').css('display', 'none')
+ });
+ $('#saturn').hover(
+    function(){
+           $('#sat-text').css('display', 'block')
+     },
+     function() { 
+        $('#sat-text').css('display', 'none')
+ });
+ $('#uranus').hover(
+    function(){
+           $('#ura-text').css('display', 'block')
+     },
+     function() { 
+        $('#ura-text').css('display', 'none')
+ });
+ $('#neptune').hover(
+    function(){
+           $('#nep-text').css('display', 'block')
+     },
+     function() { 
+        $('#nep-text').css('display', 'none')
+ });
 
 $("#poll-results").hide()
 let mercuryTotal = 0;

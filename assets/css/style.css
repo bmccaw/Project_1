@@ -597,7 +597,16 @@ p {
     }
 }
 /*Planet Animation code ends here*/
-
+/*On hover text styling*/
+#planetNames {
+    position: absolute;
+    width: 960px;
+    left: 250px;
+    top: 500px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Orbitron', 'san-serif';
+}
 /*reults div css*/
 .resultImages{
     max-width:250px;
