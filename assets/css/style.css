@@ -151,7 +151,6 @@ p {
 .jumbotron{
     background: rgba(122, 122, 122, 0.5);
 }
-
 /* Planet animation code goes here */
 .wrapper {
     position:relative;
@@ -630,7 +629,7 @@ p {
 #planetNames {
     position: absolute;
     width: 960px;
-    left: 250px;
+    left: 220px;
     top: 500px;
     font-size: 50px;
     text-align: center;
