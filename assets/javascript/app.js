@@ -24,7 +24,7 @@ $("#submit").on("click", function () {
     if (randomGenerator == $("#num").val()) {
         // $(".modal").empty()
         $(".modal").modal('toggle')
-
+        $(".title").addClass("animated lightSpeedIn")
     }
     else {
         $("#modal-text").text("Are you a human Imposter! Try again!")
@@ -156,9 +156,9 @@ $(document).on("click", "#enter", function (event) {
     $("#uranus-bar").css("width", parseInt(Math.round(uranusPercent)) * 5 + "px")
     $("#neptune-bar").css("width", parseInt(Math.round(neptunePercent)) * 5 + "px")
 })
-
-
-
+var planetInformation= []
+var i = Math.floor(Math.random() * planetInformation.length)
+$("#planet-info").html(planetInformation[i])
 
 //pollDiv
 
@@ -258,7 +258,7 @@ var planetData = {
 
 //when we click on a plaent button
 $(".clickPlanet").click(function () {
-
+$(".clickPlanet").addClass("animated bounceOut")
     //change what is displayed on screen
     $("#graphicDiv").hide();
 
