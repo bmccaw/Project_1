@@ -19,7 +19,15 @@ $(window).ready(function () {
 var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
 var charactersLength = 7;
 var randomGenerator = '';
-var audio =$("#soundclip")
+var success = new Audio("success.wav");
+var alarm = new Audio("alarm.wav");
+var login = new Audio("login.wav");
+var show = new Audio("show.wav");
+var hide = new Audio("hide.wav");
+var back = new Audio("back.wav");
+var vote = new Audio("vote.wav");
+var secret = new Audio("raven.mp3");
+
 //create random code 7 characters long and set as text in modal
 for (var i = 0; i < charactersLength; i++) {
     var rnum = Math.floor(Math.random() * characters.length);
@@ -39,10 +47,12 @@ $("#submit").on("click", function () {
         $('.jumbotron').fadeIn();
         $('#graphicDiv').fadeIn();
         $('.soc').fadeIn();
+        login.play();
     }
     //if code is entered incorrectly then try again
     else {
         $("#modal-text").text("Are you a human Imposter! Try again!")
+        alarm.play();
     }
 })
 
@@ -226,6 +236,7 @@ $(document).on("click", "#enter", function (event) {
     $("#saturn-bar").css("width", parseInt(Math.round(saturnPercent)) * 5 + "px")
     $("#uranus-bar").css("width", parseInt(Math.round(uranusPercent)) * 5 + "px")
     $("#neptune-bar").css("width", parseInt(Math.round(neptunePercent)) * 5 + "px")
+    vote.play();
 })
 
 //array of fun facts
@@ -367,6 +378,8 @@ $(".clickPlanet").click(function () {
     $("#imageBtn").hide()
     $("#imageDiv").show()
     $("#videoBtn").show()
+    success.play();
+    
 
     //reset more images button and display
     moreBntClick = false;
@@ -433,6 +446,8 @@ $(".clickPlanet").click(function () {
                     //hide more images button and set and clicked
                     $("#moreImagesBtn").hide();
                     moreBntClick = true;
+                    show.play();
+                    
                 }
             });
 
@@ -494,6 +509,7 @@ $("#imageBtn").click(function () {
     $("#moreImagesBtn").show()
     $("#imageBtn").hide()
     $("#videoBtn").show()
+    show.play();
 
     //if more images button has already been clicked, hide it
     if (moreBntClick === true) {
@@ -508,6 +524,7 @@ $("#videoBtn").click(function () {
     $("#moreImagesBtn").hide()
     $("#imageBtn").show()
     $("#videoBtn").hide()
+    hide.play();
 });
 
 //choose a new planet button click
@@ -529,4 +546,8 @@ $("#backBtn").click(function () {
     $("#news2").empty();
     $("#news3").empty();
     $("#news4").empty();
+    back.play();
+});
+$("#secret").click(function () {
+    secret.play();
 });
