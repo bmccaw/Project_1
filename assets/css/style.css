@@ -452,7 +452,8 @@ p {
     animation: anti-spin 85s infinite linear;
 }
 .icon-big{ 
-    font-size:25px
+    font-size:25px;
+    
 }
 .icon-big:hover{font-size:50px}
 #nep-text {

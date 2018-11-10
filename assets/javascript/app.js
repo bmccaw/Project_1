@@ -19,7 +19,7 @@ $(window).ready(function () {
 var characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
 var charactersLength = 7;
 var randomGenerator = '';
-
+var audio =$("#soundclip")
 //create random code 7 characters long and set as text in modal
 for (var i = 0; i < charactersLength; i++) {
     var rnum = Math.floor(Math.random() * characters.length);
