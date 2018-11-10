@@ -14,7 +14,9 @@ a:hover {
 a:active {
     color: rgb(38, 0, 255)
 }
-
+.card-head{width:180px;position: relative;
+    left:80px
+}
 #randomNum{color:rgb(64, 247, 47);}
 
 #graphicDiv {
@@ -23,8 +25,10 @@ a:active {
 }
 
 #poll-table{
-    width:30px
-}
+    width:30px;
+    position: relative;
+left:80px}
+
 
 #onLoad {
     top: 200px;
@@ -452,7 +456,8 @@ p {
     animation: anti-spin 85s infinite linear;
 }
 .icon-big{ 
-    font-size:25px
+    font-size:25px;
+    
 }
 .icon-big:hover{font-size:50px}
 #nep-text {
